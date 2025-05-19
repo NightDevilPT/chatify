@@ -1,0 +1,40 @@
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { INestApplication } from '@nestjs/common';
+
+export const setupSwagger = (app: INestApplication) => {
+  const config = new DocumentBuilder()
+    .setTitle('Your API Title')
+    .setDescription('Your API Description')
+    .setVersion('1.0')
+    .addCookieAuth(
+      'refreshToken', // Cookie name
+      {
+        type: 'apiKey',
+        in: 'cookie',
+        name: 'refreshToken',
+        description: 'Refresh token for authentication',
+      },
+      'refresh-token', // Security scheme name
+    )
+    .addCookieAuth(
+      'accessToken', // Cookie name
+      {
+        type: 'apiKey',
+        in: 'cookie',
+        name: 'accessToken',
+        description: 'Access token for authentication',
+      },
+      'access-token', // Security scheme name
+    )
+    .build();
+
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, document, {
+    swaggerOptions: {
+      persistAuthorization: true,
+      tagsSorter: 'alpha',
+      operationsSorter: 'alpha',
+      withCredentials: true, // Important for cookies to work in Swagger UI
+    },
+  });
+};
