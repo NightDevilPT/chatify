@@ -3,7 +3,7 @@ import { Settings } from "./settings/entities/setting.entity";
 import { UsersModule } from "./users/users.module";
 
 export const Modules = [
-	// ChatSocketModule,
+	ChatSocketModule,
 	UsersModule,
 	Settings
 ]

@@ -9,7 +9,7 @@ export enum UserStatusEnum {
   TYPING = 'TYPING',
 }
 
-@Schema({ timestamps: true })
+@Schema({ timestamps: true, _id: true }) // _id is automatically created by Mongoose
 export class User {
   @ApiProperty({
     example: 'user@example.com',
@@ -21,6 +21,20 @@ export class User {
   @ApiProperty({ example: 'securepassword123', description: 'User password' })
   @Prop({ required: true, select: false })
   password: string;
+
+  @ApiProperty({
+    example: 'jwt_token_string',
+    description: 'Auth token for the user (optional)',
+  })
+  @Prop({ default: null })
+  token?: string;
+
+  @ApiProperty({
+    example: true,
+    description: 'Indicates if the user is verified',
+  })
+  @Prop({ default: false })
+  isVerified: boolean;
 
   @ApiProperty({ example: 'john_doe', description: 'Unique username' })
   @Prop({
@@ -34,49 +48,6 @@ export class User {
     ],
   })
   username: string;
-
-  @ApiProperty({ example: 'John', description: 'First name of the user' })
-  @Prop({ default: '', trim: true, maxlength: 50 })
-  firstName: string;
-
-  @ApiProperty({ example: 'Doe', description: 'Last name of the user' })
-  @Prop({ default: '', trim: true, maxlength: 50 })
-  lastName: string;
-
-  @ApiProperty({
-    example: 'https://example.com/avatar.jpg',
-    description: 'Profile picture URL',
-  })
-  @Prop({ default: '' })
-  avatar: string;
-
-  @ApiProperty({
-    example: 'Hey there! I am using Chatify!',
-    description: 'User bio',
-    required: false,
-  })
-  @Prop({
-    default: 'Hey there! I am using Chatify!',
-    maxlength: 200,
-  })
-  bio: string;
-
-  @ApiProperty({
-    enum: UserStatusEnum,
-    enumName: 'UserStatusEnum',
-    default: UserStatusEnum.OFFLINE,
-    required: false,
-  })
-  @Prop({
-    type: String,
-    enum: UserStatusEnum,
-    default: UserStatusEnum.OFFLINE,
-  })
-  status: UserStatusEnum;
-
-  @ApiProperty({ description: 'Reference to user settings' })
-  @Prop({ type: Types.ObjectId, ref: 'Settings' })
-  settings: Types.ObjectId;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);

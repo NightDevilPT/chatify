@@ -1,0 +1,4 @@
+{
+	"scanPath": "apps\\server\\src\\modules\\users",
+	"outputPath": "user-modules-report.txt"
+}
