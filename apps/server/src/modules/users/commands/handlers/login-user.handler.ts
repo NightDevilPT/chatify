@@ -1,13 +1,14 @@
 // src/modules/auth/commands/handlers/login.handler.ts
 import { Injectable } from '@nestjs/common';
-import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
 import { ErrorTypes } from 'src/interfaces/error.interface';
-import { LoggerService } from 'src/services/logger-service/index.service';
-import { HttpErrorService } from 'src/services/http-error-service/index.service';
-import { HashService } from 'src/services/hash-service/index.service';
 import { LoginCommand } from '../impl/login-user.command';
 import { UserRepository } from '../../repository/user.repository';
+import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
+import { UserPayload } from 'src/interfaces/jwt-payload.interface';
+import { HashService } from 'src/services/hash-service/index.service';
+import { LoggerService } from 'src/services/logger-service/index.service';
 import { JwtTokenService } from 'src/services/jwt-token-service/index.service';
+import { HttpErrorService } from 'src/services/http-error-service/index.service';
 
 @Injectable()
 @CommandHandler(LoginCommand)
@@ -45,7 +46,7 @@ export class LoginUserHandler implements ICommandHandler<LoginCommand> {
 
       const user = await this.userRepository.findByEmail(email, true);
       this.logger.debug(`User found: ${user ? user.email : 'None'}`);
-	  console.log(user);
+      console.log(user);
 
       if (!user) {
         this.logger.error(`No user found with email: ${email}`);
@@ -59,7 +60,7 @@ export class LoginUserHandler implements ICommandHandler<LoginCommand> {
         password,
         user.password,
       );
-	  console.log(passwordMatch,'passwordMatch');
+      console.log(passwordMatch, 'passwordMatch');
 
       if (!passwordMatch) {
         this.logger.error(`Invalid password for email: ${email}`);
@@ -77,8 +78,8 @@ export class LoginUserHandler implements ICommandHandler<LoginCommand> {
         );
       }
 
-      const payload = {
-        userId: user,
+      const payload: UserPayload = {
+        userId: user.toObject()._id.toString(),
         email: user.email,
       };
 
