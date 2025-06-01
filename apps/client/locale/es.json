@@ -1,0 +1,51 @@
+{
+	"general": {
+		"email": "Correo electrónico",
+		"password": "Contraseña",
+		"emailPlaceholder": "Ingrese su correo electrónico",
+		"passwordPlaceholder": "Ingrese su contraseña",
+		"forgotPassword": "¿Olvidó su contraseña?",
+		"submit": "Enviar",
+		"googleLogin": "Iniciar sesión con Google",
+		"noAccount": "¿No tienes una cuenta?",
+		"signUp": "Regístrate",
+		"login": "Iniciar sesión",
+		"continueWithGoogle": "Continuar con Google",
+		"dontHaveAccount": "¿No tienes una cuenta?",
+		"beBolBeSocial": "Sé audaz, sé social.",
+		"username": "Nombre de usuario",
+		"usernamePlaceholder": "Ingrese su nombre de usuario",
+		"alreadyHaveAccount": "¿Ya tienes una cuenta?",
+		"userVerifiedSuccess": "Usuario verificado con éxito"
+	},
+	"login": {
+		"title": "Inicia sesión en tu cuenta",
+		"description": "Ingresa tu correo electrónico para iniciar sesión",
+		"submit": "Iniciar sesión"
+	},
+	"signup": {
+		"title": "Crea tu cuenta",
+		"description": "Regístrate para comenzar con Chatify",
+		"submit": "Registrarse"
+	},
+	"forgot": {
+		"title": "Restablece tu contraseña",
+		"description": "Ingresa tu correo electrónico para recibir instrucciones de restablecimiento",
+		"submit": "Enviar correo de restablecimiento"
+	},
+	"updatePassword": {
+		"title": "Actualiza tu contraseña",
+		"description": "Introduce tu nueva contraseña a continuación",
+		"newPassword": "Nueva contraseña",
+		"newPasswordPlaceholder": "Introduce tu nueva contraseña",
+		"confirmPassword": "Confirmar contraseña",
+		"confirmPasswordPlaceholder": "Confirma tu nueva contraseña",
+		"submit": "Actualizar contraseña"
+	},
+	"error": {
+		"invalidEmail": "Dirección de correo electrónico no válida",
+		"passwordLength": "La contraseña debe tener al menos 8 caracteres",
+		"invalidToken": "Token inválido o expirado",
+		"failedVerification": "Error al verificar al usuario"
+	}
+}

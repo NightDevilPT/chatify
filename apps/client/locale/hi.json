@@ -1,0 +1,51 @@
+{
+	"general": {
+		"email": "ईमेल",
+		"password": "पासवर्ड",
+		"emailPlaceholder": "अपना ईमेल पता दर्ज करें",
+		"passwordPlaceholder": "अपना पासवर्ड दर्ज करें",
+		"forgotPassword": "पासवर्ड भूल गए?",
+		"submit": "सबमिट करें",
+		"googleLogin": "Google से लॉगिन करें",
+		"noAccount": "खाता नहीं है?",
+		"signUp": "साइन अप करें",
+		"login": "लॉगिन",
+		"continueWithGoogle": "Google के साथ जारी रखें",
+		"dontHaveAccount": "खाता नहीं है?",
+		"beBolBeSocial": "साहसी बनो, सामाजिक बनो।",
+		"username": "उपयोगकर्ता नाम",
+		"usernamePlaceholder": "अपना उपयोगकर्ता नाम दर्ज करें",
+		"alreadyHaveAccount": "पहले से खाता है?",
+		"userVerifiedSuccess": "उपयोगकर्ता सफलतापूर्वक सत्यापित हुआ"
+	},
+	"login": {
+		"title": "अपने खाते में लॉगिन करें",
+		"description": "अपने ईमेल को दर्ज करें और लॉगिन करें",
+		"submit": "लॉगिन करें"
+	},
+	"signup": {
+		"title": "अपना खाता बनाएं",
+		"description": "Chatify के साथ शुरू करने के लिए साइन अप करें",
+		"submit": "साइन अप करें"
+	},
+	"forgot": {
+		"title": "अपना पासवर्ड रीसेट करें",
+		"description": "पासवर्ड रीसेट निर्देश प्राप्त करने के लिए अपना ईमेल दर्ज करें",
+		"submit": "रीसेट ईमेल भेजें"
+	},
+	"updatePassword": {
+		"title": "अपना पासवर्ड अपडेट करें",
+		"description": "नीचे अपना नया पासवर्ड दर्ज करें",
+		"newPassword": "नया पासवर्ड",
+		"newPasswordPlaceholder": "अपना नया पासवर्ड दर्ज करें",
+		"confirmPassword": "पासवर्ड पुष्टि करें",
+		"confirmPasswordPlaceholder": "अपना नया पासवर्ड पुष्टि करें",
+		"submit": "पासवर्ड अपडेट करें"
+	},
+	"error": {
+		"invalidEmail": "अमान्य ईमेल पता",
+		"passwordLength": "पासवर्ड कम से कम 8 अक्षरों का होना चाहिए",
+		"invalidToken": "अमान्य या समाप्त टोकन",
+		"failedVerification": "उपयोगकर्ता सत्यापन विफल हुआ"
+	}
+}

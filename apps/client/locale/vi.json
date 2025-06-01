@@ -1,0 +1,51 @@
+{
+	"general": {
+		"email": "Email",
+		"password": "Mật khẩu",
+		"emailPlaceholder": "Nhập địa chỉ email của bạn",
+		"passwordPlaceholder": "Nhập mật khẩu của bạn",
+		"forgotPassword": "Quên mật khẩu?",
+		"submit": "Gửi",
+		"googleLogin": "Đăng nhập với Google",
+		"noAccount": "Chưa có tài khoản?",
+		"signUp": "Đăng ký",
+		"login": "Đăng nhập",
+		"continueWithGoogle": "Tiếp tục với Google",
+		"dontHaveAccount": "Chưa có tài khoản?",
+		"beBolBeSocial": "Hãy mạnh dạn, hãy xã hội.",
+		"username": "Tên đăng nhập",
+		"usernamePlaceholder": "Nhập tên đăng nhập của bạn",
+		"alreadyHaveAccount": "Đã có tài khoản?",
+		"userVerifiedSuccess": "Xác minh người dùng thành công"
+	},
+	"login": {
+		"title": "Đăng nhập vào tài khoản của bạn",
+		"description": "Nhập email của bạn bên dưới để đăng nhập",
+		"submit": "Đăng nhập"
+	},
+	"signup": {
+		"title": "Tạo tài khoản của bạn",
+		"description": "Đăng ký để bắt đầu với Chatify",
+		"submit": "Đăng ký"
+	},
+	"forgot": {
+		"title": "Đặt lại mật khẩu của bạn",
+		"description": "Nhập email của bạn để nhận hướng dẫn đặt lại",
+		"submit": "Gửi email đặt lại"
+	},
+	"updatePassword": {
+		"title": "Cập nhật mật khẩu",
+		"description": "Nhập mật khẩu mới của bạn bên dưới",
+		"newPassword": "Mật khẩu mới",
+		"newPasswordPlaceholder": "Nhập mật khẩu mới của bạn",
+		"confirmPassword": "Xác nhận mật khẩu",
+		"confirmPasswordPlaceholder": "Xác nhận mật khẩu mới của bạn",
+		"submit": "Cập nhật mật khẩu"
+	},
+	"error": {
+		"invalidEmail": "Địa chỉ email không hợp lệ",
+		"passwordLength": "Mật khẩu phải có ít nhất 8 ký tự",
+		"invalidToken": "Mã không hợp lệ hoặc đã hết hạn",
+		"failedVerification": "Xác minh người dùng thất bại"
+	}
+}

@@ -1,0 +1,51 @@
+{
+	"general": {
+		"email": "Email",
+		"password": "Mot de passe",
+		"emailPlaceholder": "Entrez votre adresse email",
+		"passwordPlaceholder": "Entrez votre mot de passe",
+		"forgotPassword": "Mot de passe oublié ?",
+		"submit": "Envoyer",
+		"googleLogin": "Se connecter avec Google",
+		"noAccount": "Vous n'avez pas de compte ?",
+		"signUp": "S'inscrire",
+		"login": "Connexion",
+		"continueWithGoogle": "Continuer avec Google",
+		"dontHaveAccount": "Vous n'avez pas de compte ?",
+		"beBolBeSocial": "Soyez audacieux, soyez social.",
+		"username": "Nom d'utilisateur",
+		"usernamePlaceholder": "Entrez votre nom d'utilisateur",
+		"alreadyHaveAccount": "Vous avez déjà un compte ?",
+		"userVerifiedSuccess": "Utilisateur vérifié avec succès"
+	},
+	"login": {
+		"title": "Connectez-vous à votre compte",
+		"description": "Entrez votre email ci-dessous pour vous connecter",
+		"submit": "Connexion"
+	},
+	"signup": {
+		"title": "Créez votre compte",
+		"description": "Inscrivez-vous pour commencer avec Chatify",
+		"submit": "S'inscrire"
+	},
+	"forgot": {
+		"title": "Réinitialisez votre mot de passe",
+		"description": "Entrez votre email ci-dessous pour recevoir les instructions de réinitialisation",
+		"submit": "Envoyer le mail de réinitialisation"
+	},
+	"updatePassword": {
+		"title": "Mettez à jour votre mot de passe",
+		"description": "Entrez votre nouveau mot de passe ci-dessous",
+		"newPassword": "Nouveau mot de passe",
+		"newPasswordPlaceholder": "Entrez votre nouveau mot de passe",
+		"confirmPassword": "Confirmez le mot de passe",
+		"confirmPasswordPlaceholder": "Confirmez votre nouveau mot de passe",
+		"submit": "Mettre à jour le mot de passe"
+	},
+	"error": {
+		"invalidEmail": "Adresse e-mail invalide",
+		"passwordLength": "Le mot de passe doit contenir au moins 8 caractères",
+		"invalidToken": "Jeton invalide ou expiré",
+		"failedVerification": "Échec de la vérification de l'utilisateur"
+	}
+}

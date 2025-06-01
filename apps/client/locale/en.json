@@ -1,0 +1,52 @@
+{
+	"general": {
+		"email": "Email",
+		"password": "Password",
+		"emailPlaceholder": "Enter your email address",
+		"passwordPlaceholder": "Enter your password",
+		"forgotPassword": "Forgot your password?",
+		"submit": "Submit",
+		"googleLogin": "Login with Google",
+		"noAccount": "Don't have an account?",
+		"signUp": "Sign up",
+		"login": "Login",
+		"continueWithGoogle": "Continue with Google",
+		"dontHaveAccount": "Don't have an account?",
+		"beBolBeSocial": "Be bold, be social.",
+		"username": "Username",
+		"usernamePlaceholder": "Enter your username",
+		"alreadyHaveAccount": "Already have an account?",
+		"loading": "Loading...",
+		"userVerifiedSuccess": "User verified successfully"
+	},
+	"login": {
+		"title": "Login to your account",
+		"description": "Enter your email below to login to your account",
+		"submit": "Login"
+	},
+	"signup": {
+		"title": "Create your account",
+		"description": "Sign up to get started with Chatify",
+		"submit": "Sign up"
+	},
+	"forgot": {
+		"title": "Reset your password",
+		"description": "Enter your email below to receive password reset mail",
+		"submit": "Send reset email"
+	},
+	"updatePassword": {
+		"title": "Update your password",
+		"description": "Enter your new password below",
+		"newPassword": "New Password",
+		"newPasswordPlaceholder": "Enter your new password",
+		"confirmPassword": "Confirm Password",
+		"confirmPasswordPlaceholder": "Confirm your new password",
+		"submit": "Update Password"
+	},
+	"error": {
+		"invalidEmail": "Invalid email address",
+		"passwordLength": "Password must be at least 8 characters",
+		"invalidToken": "Invalid or expired token",
+		"failedVerification": "Failed to verify user"
+	}
+}

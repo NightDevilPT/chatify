@@ -1,0 +1,51 @@
+{
+	"general": {
+		"email": "E-posta",
+		"password": "Şifre",
+		"emailPlaceholder": "E-posta adresinizi girin",
+		"passwordPlaceholder": "Şifrenizi girin",
+		"forgotPassword": "Şifrenizi mi unuttunuz?",
+		"submit": "Gönder",
+		"googleLogin": "Google ile giriş yap",
+		"noAccount": "Hesabınız yok mu?",
+		"signUp": "Kayıt ol",
+		"login": "Giriş yap",
+		"continueWithGoogle": "Google ile devam et",
+		"dontHaveAccount": "Hesabınız yok mu?",
+		"beBolBeSocial": "Cesur ol, sosyal ol.",
+		"username": "Kullanıcı adı",
+		"usernamePlaceholder": "Kullanıcı adınızı girin",
+		"alreadyHaveAccount": "Zaten hesabınız var mı?",
+		"userVerifiedSuccess": "Kullanıcı başarıyla doğrulandı"
+	},
+	"login": {
+		"title": "Hesabınıza giriş yapın",
+		"description": "Giriş yapmak için aşağıya e-postanızı girin",
+		"submit": "Giriş yap"
+	},
+	"signup": {
+		"title": "Hesabınızı oluşturun",
+		"description": "Chatify ile başlamak için kayıt olun",
+		"submit": "Kayıt ol"
+	},
+	"forgot": {
+		"title": "Şifrenizi sıfırlayın",
+		"description": "Şifre sıfırlama talimatlarını almak için e-postanızı girin",
+		"submit": "Sıfırlama e-postası gönder"
+	},
+	"updatePassword": {
+		"title": "Şifrenizi güncelleyin",
+		"description": "Yeni şifrenizi aşağıya girin",
+		"newPassword": "Yeni Şifre",
+		"newPasswordPlaceholder": "Yeni şifrenizi girin",
+		"confirmPassword": "Şifreyi Onayla",
+		"confirmPasswordPlaceholder": "Yeni şifrenizi onaylayın",
+		"submit": "Şifreyi Güncelle"
+	},
+	"error": {
+		"invalidEmail": "Geçersiz e-posta adresi",
+		"passwordLength": "Şifre en az 8 karakter olmalıdır",
+		"invalidToken": "Geçersiz veya süresi dolmuş belirteç",
+		"failedVerification": "Kullanıcı doğrulaması başarısız oldu"
+	}
+}

@@ -1,0 +1,51 @@
+{
+	"general": {
+		"email": "Email",
+		"password": "Senha",
+		"emailPlaceholder": "Digite seu endereço de email",
+		"passwordPlaceholder": "Digite sua senha",
+		"forgotPassword": "Esqueceu sua senha?",
+		"submit": "Enviar",
+		"googleLogin": "Entrar com Google",
+		"noAccount": "Não tem uma conta?",
+		"signUp": "Cadastrar-se",
+		"login": "Entrar",
+		"continueWithGoogle": "Continuar com Google",
+		"dontHaveAccount": "Não tem uma conta?",
+		"beBolBeSocial": "Seja ousado, seja social.",
+		"username": "Nome de usuário",
+		"usernamePlaceholder": "Digite seu nome de usuário",
+		"alreadyHaveAccount": "Já tem uma conta?",
+		"userVerifiedSuccess": "Usuário verificado com sucesso"
+	},
+	"login": {
+		"title": "Faça login na sua conta",
+		"description": "Digite seu email abaixo para fazer login",
+		"submit": "Entrar"
+	},
+	"signup": {
+		"title": "Crie sua conta",
+		"description": "Cadastre-se para começar com o Chatify",
+		"submit": "Cadastrar"
+	},
+	"forgot": {
+		"title": "Redefina sua senha",
+		"description": "Digite seu email para receber instruções de redefinição",
+		"submit": "Enviar email de redefinição"
+	},
+	"updatePassword": {
+		"title": "Atualize sua senha",
+		"description": "Digite sua nova senha abaixo",
+		"newPassword": "Nova senha",
+		"newPasswordPlaceholder": "Digite sua nova senha",
+		"confirmPassword": "Confirme a senha",
+		"confirmPasswordPlaceholder": "Confirme sua nova senha",
+		"submit": "Atualizar senha"
+	},
+	"error": {
+		"invalidEmail": "Endereço de e-mail inválido",
+		"passwordLength": "A senha deve ter pelo menos 8 caracteres",
+		"invalidToken": "Token inválido ou expirado",
+		"failedVerification": "Falha na verificação do usuário"
+	}
+}

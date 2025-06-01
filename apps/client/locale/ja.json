@@ -1,0 +1,51 @@
+{
+	"general": {
+		"email": "メールアドレス",
+		"password": "パスワード",
+		"emailPlaceholder": "メールアドレスを入力してください",
+		"passwordPlaceholder": "パスワードを入力してください",
+		"forgotPassword": "パスワードをお忘れですか？",
+		"submit": "送信",
+		"googleLogin": "Googleでログイン",
+		"noAccount": "アカウントをお持ちでないですか？",
+		"signUp": "サインアップ",
+		"login": "ログイン",
+		"continueWithGoogle": "Googleで続行",
+		"dontHaveAccount": "アカウントをお持ちでないですか？",
+		"beBolBeSocial": "大胆に、社交的に。",
+		"username": "ユーザー名",
+		"usernamePlaceholder": "ユーザー名を入力してください",
+		"alreadyHaveAccount": "すでにアカウントをお持ちですか？",
+		"userVerifiedSuccess": "ユーザーの確認に成功しました"
+	},
+	"login": {
+		"title": "アカウントにログイン",
+		"description": "下にメールアドレスを入力してログインしてください",
+		"submit": "ログイン"
+	},
+	"signup": {
+		"title": "アカウントを作成",
+		"description": "Chatifyを始めるためにサインアップしてください",
+		"submit": "サインアップ"
+	},
+	"forgot": {
+		"title": "パスワードをリセット",
+		"description": "パスワードリセットの指示を受け取るためにメールアドレスを入力してください",
+		"submit": "リセットメールを送信"
+	},
+	"updatePassword": {
+		"title": "パスワードを更新する",
+		"description": "新しいパスワードを以下に入力してください",
+		"newPassword": "新しいパスワード",
+		"newPasswordPlaceholder": "新しいパスワードを入力してください",
+		"confirmPassword": "パスワードの確認",
+		"confirmPasswordPlaceholder": "新しいパスワードを確認してください",
+		"submit": "パスワードを更新する"
+	},
+	"error": {
+		"invalidEmail": "無効なメールアドレスです",
+		"passwordLength": "パスワードは8文字以上である必要があります",
+		"invalidToken": "無効または期限切れのトークン",
+		"failedVerification": "ユーザーの確認に失敗しました"
+	}
+}

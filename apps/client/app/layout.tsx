@@ -1,8 +1,9 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import ChatLayout from "@/components/layouts/chat-layout/chat-layout";
+import { QueryProvider } from "@/components/providers/query-provider";
+import { I18nProvider } from "@/components/providers/I18n-provider";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -27,11 +28,13 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased w-full h-screen`}
+				className={`${geistSans.variable} ${geistMono.variable} antialiased w-full h-screen bg-background`}
 			>
-				<ThemeProvider>
-					<ChatLayout>{children}</ChatLayout>
-				</ThemeProvider>
+				<I18nProvider>
+					<QueryProvider>
+						<ThemeProvider>{children}</ThemeProvider>
+					</QueryProvider>
+				</I18nProvider>
 			</body>
 		</html>
 	);

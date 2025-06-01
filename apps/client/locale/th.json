@@ -1,0 +1,51 @@
+{
+	"general": {
+		"email": "อีเมล",
+		"password": "รหัสผ่าน",
+		"emailPlaceholder": "กรอกที่อยู่อีเมลของคุณ",
+		"passwordPlaceholder": "กรอกรหัสผ่านของคุณ",
+		"forgotPassword": "ลืมรหัสผ่านหรือไม่?",
+		"submit": "ส่ง",
+		"googleLogin": "เข้าสู่ระบบด้วย Google",
+		"noAccount": "ยังไม่มีบัญชีใช่ไหม?",
+		"signUp": "สมัครสมาชิก",
+		"login": "เข้าสู่ระบบ",
+		"continueWithGoogle": "ดำเนินการต่อด้วย Google",
+		"dontHaveAccount": "ยังไม่มีบัญชีใช่ไหม?",
+		"beBolBeSocial": "กล้าหาญและเป็นสังคม",
+		"username": "ชื่อผู้ใช้",
+		"usernamePlaceholder": "กรอกชื่อผู้ใช้ของคุณ",
+		"alreadyHaveAccount": "มีบัญชีอยู่แล้วหรือไม่?",
+		"userVerifiedSuccess": "ยืนยันผู้ใช้สำเร็จแล้ว"
+	},
+	"login": {
+		"title": "เข้าสู่ระบบบัญชีของคุณ",
+		"description": "กรอกอีเมลของคุณด้านล่างเพื่อลงชื่อเข้าใช้",
+		"submit": "เข้าสู่ระบบ"
+	},
+	"signup": {
+		"title": "สร้างบัญชีของคุณ",
+		"description": "สมัครสมาชิกเพื่อเริ่มต้นกับ Chatify",
+		"submit": "สมัครสมาชิก"
+	},
+	"forgot": {
+		"title": "รีเซ็ตรหัสผ่านของคุณ",
+		"description": "กรอกอีเมลของคุณเพื่อรับคำแนะนำในการรีเซ็ต",
+		"submit": "ส่งอีเมลรีเซ็ต"
+	},
+	"updatePassword": {
+		"title": "อัปเดตรหัสผ่านของคุณ",
+		"description": "กรอกรหัสผ่านใหม่ของคุณด้านล่าง",
+		"newPassword": "รหัสผ่านใหม่",
+		"newPasswordPlaceholder": "กรอกรหัสผ่านใหม่ของคุณ",
+		"confirmPassword": "ยืนยันรหัสผ่าน",
+		"confirmPasswordPlaceholder": "ยืนยันรหัสผ่านใหม่ของคุณ",
+		"submit": "อัปเดตรหัสผ่าน"
+	},
+	"error": {
+		"invalidEmail": "ที่อยู่อีเมลไม่ถูกต้อง",
+		"passwordLength": "รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษร",
+		"invalidToken": "โทเค็นไม่ถูกต้องหรือหมดอายุ",
+		"failedVerification": "การยืนยันผู้ใช้ล้มเหลว"
+	}
+}

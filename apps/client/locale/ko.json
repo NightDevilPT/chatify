@@ -1,0 +1,51 @@
+{
+	"general": {
+		"email": "이메일",
+		"password": "비밀번호",
+		"emailPlaceholder": "이메일 주소를 입력하세요",
+		"passwordPlaceholder": "비밀번호를 입력하세요",
+		"forgotPassword": "비밀번호를 잊으셨나요?",
+		"submit": "제출",
+		"googleLogin": "Google로 로그인",
+		"noAccount": "계정이 없으신가요?",
+		"signUp": "가입하기",
+		"login": "로그인",
+		"continueWithGoogle": "Google로 계속하기",
+		"dontHaveAccount": "계정이 없으신가요?",
+		"beBolBeSocial": "대담하게, 사교적으로.",
+		"username": "사용자 이름",
+		"usernamePlaceholder": "사용자 이름을 입력하세요",
+		"alreadyHaveAccount": "이미 계정이 있나요?",
+		"userVerifiedSuccess": "사용자가 성공적으로 인증되었습니다"
+	},
+	"login": {
+		"title": "계정에 로그인",
+		"description": "로그인하려면 아래에 이메일을 입력하세요",
+		"submit": "로그인"
+	},
+	"signup": {
+		"title": "계정 만들기",
+		"description": "Chatify를 시작하려면 가입하세요",
+		"submit": "가입하기"
+	},
+	"forgot": {
+		"title": "비밀번호 재설정",
+		"description": "비밀번호 재설정 안내를 받으려면 이메일을 입력하세요",
+		"submit": "재설정 이메일 보내기"
+	},
+	"updatePassword": {
+		"title": "비밀번호 변경",
+		"description": "아래에 새 비밀번호를 입력하세요",
+		"newPassword": "새 비밀번호",
+		"newPasswordPlaceholder": "새 비밀번호를 입력하세요",
+		"confirmPassword": "비밀번호 확인",
+		"confirmPasswordPlaceholder": "새 비밀번호를 확인하세요",
+		"submit": "비밀번호 변경"
+	},
+	"error": {
+		"invalidEmail": "유효하지 않은 이메일 주소입니다",
+		"passwordLength": "비밀번호는 최소 8자 이상이어야 합니다",
+		"invalidToken": "유효하지 않거나 만료된 토큰입니다",
+		"failedVerification": "사용자 인증에 실패했습니다"
+	}
+}
