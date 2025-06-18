@@ -21,12 +21,14 @@
 	"login": {
 		"title": "계정에 로그인",
 		"description": "로그인하려면 아래에 이메일을 입력하세요",
-		"submit": "로그인"
+		"submit": "로그인",
+		"loginSuccess": "로그인 성공! 리디렉션 중..."
 	},
 	"signup": {
 		"title": "계정 만들기",
 		"description": "Chatify를 시작하려면 가입하세요",
-		"submit": "가입하기"
+		"submit": "가입하기",
+		"successMessage": "계정이 성공적으로 생성되었습니다! 계정을 확인하려면 이메일을 확인하세요."
 	},
 	"forgot": {
 		"title": "비밀번호 재설정",
@@ -43,9 +45,14 @@
 		"submit": "비밀번호 변경"
 	},
 	"error": {
-		"invalidEmail": "유효하지 않은 이메일 주소입니다",
+		"invalidEmail": "유효하지 않은 이메일 주소",
 		"passwordLength": "비밀번호는 최소 8자 이상이어야 합니다",
-		"invalidToken": "유효하지 않거나 만료된 토큰입니다",
-		"failedVerification": "사용자 인증에 실패했습니다"
+		"invalidToken": "유효하지 않거나 만료된 토큰",
+		"failedVerification": "사용자 확인에 실패했습니다",
+		"conflictUser": "이메일 {{email}} 사용자가 이미 존재합니다",
+		"genericError": "등록 중 오류가 발생했습니다. 다시 시도해 주세요.",
+		"emailPasswordRequired": "이메일과 비밀번호가 필요합니다",
+		"invalidCredentials": "잘못된 이메일 또는 비밀번호",
+		"verifyEmailBeforeLogin": "로그인하기 전에 이메일을 인증해 주세요"
 	}
 }

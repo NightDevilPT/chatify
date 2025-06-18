@@ -1,6 +1,9 @@
+"use client";
+
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { toast } from "sonner"; // Assuming you're using `sonner` for toast notifications
 
 import {
 	Card,
@@ -18,6 +21,8 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import ChatifyLogo from "@/components/shared/atoms/logo";
 import { PasswordInput } from "@/components/ui/password-input";
+import { useLogin } from "@/hooks/login/useLogin";
+import { useRouter } from "next/navigation";
 
 // Define form validation schema
 const formSchema = z.object({
@@ -31,6 +36,7 @@ export function LoginForm({
 	className,
 	...props
 }: React.ComponentProps<"div">) {
+	const router = useRouter();
 	const { t } = useTranslation();
 	const {
 		register,
@@ -40,9 +46,27 @@ export function LoginForm({
 		resolver: zodResolver(formSchema),
 	});
 
+	// Using the login hook
+	const { mutate: loginUser } = useLogin({
+		onSuccess: (response) => {
+			if (response.status === "success") {
+				toast.success(
+					t(`login.${response.message}`) || "Login successful!"
+				);
+				router.push("/");
+			}
+		},
+		onError: (error) => {
+			console.log("Login error:", error);
+			toast.error(
+				t(`error.${error.message}`) || "Login failed. Please try again."
+			);
+		},
+	});
+
+	// On submit, pass the form data to the login mutation
 	const onSubmit = (data: FormData) => {
-		console.log("Form submitted:", data);
-		// Add your login logic here
+		loginUser(data); // Trigger the login mutation with email and password
 	};
 
 	return (
@@ -52,13 +76,12 @@ export function LoginForm({
 				<Separator />
 				<CardHeader>
 					<CardTitle>{t("login.title")}</CardTitle>
-					<CardDescription>
-						{t("login.description")}
-					</CardDescription>
+					<CardDescription>{t("login.description")}</CardDescription>
 				</CardHeader>
 				<CardContent>
 					<form onSubmit={handleSubmit(onSubmit)}>
 						<div className="flex flex-col gap-6">
+							{/* Email Input */}
 							<div className="grid">
 								<div className="flex items-center mb-3">
 									<Label htmlFor="email">
@@ -77,6 +100,8 @@ export function LoginForm({
 									</Label>
 								)}
 							</div>
+
+							{/* Password Input */}
 							<div className="grid">
 								<div className="flex items-center mb-3">
 									<Label htmlFor="password">
@@ -102,6 +127,8 @@ export function LoginForm({
 									{t("general.forgotPassword")}
 								</Link>
 							</div>
+
+							{/* Submit Button */}
 							<div className="flex flex-col gap-3">
 								<Button
 									type="submit"
@@ -118,6 +145,8 @@ export function LoginForm({
 								</Button> */}
 							</div>
 						</div>
+
+						{/* Redirect to sign up */}
 						<div className="mt-4 text-center text-sm">
 							{t("general.dontHaveAccount")}{" "}
 							<Link

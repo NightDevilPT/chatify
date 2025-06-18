@@ -1,6 +1,7 @@
 "use client";
 
 import * as z from "zod";
+import { toast } from "sonner";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
@@ -20,6 +21,8 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import ChatifyLogo from "@/components/shared/atoms/logo";
 import { PasswordInput } from "@/components/ui/password-input";
+import { useRegister } from "@/hooks/signup/useRegister";
+import { useRouter } from "next/navigation";
 
 // Match backend DTO validation with Zod
 const formSchema = z.object({
@@ -35,25 +38,37 @@ const formSchema = z.object({
 	password: z.string().min(8, "Password must be at least 8 characters"),
 });
 
-type FormData = z.infer<typeof formSchema>;
+export type FormData = z.infer<typeof formSchema>;
 
 export function SignupForm({
 	className,
 	...props
 }: React.ComponentProps<"div">) {
 	const { t } = useTranslation();
-
+	const router = useRouter();
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
+		watch,
 	} = useForm<FormData>({
 		resolver: zodResolver(formSchema),
 	});
+	const { mutate: registerService } = useRegister({
+		onSuccess: (response) => {
+			if (response.status === "success") {
+				toast.success(t("signup.successMessage"));
+				router.push("/auth/login");
+			}
+		},
+		onError: (error) => {
+			console.log(error.message)
+			toast.error(t(`error.${error.message}`, { email: watch("email") }));
+		},
+	});
 
 	const onSubmit = (data: FormData) => {
-		console.log("Signup Data:", data);
-		// Trigger your API call here
+		registerService(data);
 	};
 
 	return (
@@ -63,9 +78,7 @@ export function SignupForm({
 				<Separator />
 				<CardHeader>
 					<CardTitle>{t("signup.title")}</CardTitle>
-					<CardDescription>
-						{t("signup.description")}
-					</CardDescription>
+					<CardDescription>{t("signup.description")}</CardDescription>
 				</CardHeader>
 				<CardContent>
 					<form
@@ -80,7 +93,9 @@ export function SignupForm({
 								</Label>
 								<Input
 									id="username"
-									placeholder={t("general.usernamePlaceholder")}
+									placeholder={t(
+										"general.usernamePlaceholder"
+									)}
 									{...register("username")}
 								/>
 								{errors.username && (
@@ -149,9 +164,7 @@ export function SignupForm({
 
 							{/* Redirect to login */}
 							<div className="mt-4 text-center text-sm">
-								{t(
-									"general.alreadyHaveAccount"
-								)}{" "}
+								{t("general.alreadyHaveAccount")}{" "}
 								<Link
 									href="/auth/login"
 									className="underline underline-offset-4"

@@ -21,12 +21,14 @@
 	"login": {
 		"title": "アカウントにログイン",
 		"description": "下にメールアドレスを入力してログインしてください",
-		"submit": "ログイン"
+		"submit": "ログイン",
+		"loginSuccess": "ログインに成功しました！リダイレクト中..."
 	},
 	"signup": {
 		"title": "アカウントを作成",
 		"description": "Chatifyを始めるためにサインアップしてください",
-		"submit": "サインアップ"
+		"submit": "サインアップ",
+		"successMessage": "アカウントが正常に作成されました！アカウントを確認するためにメールをチェックしてください。"
 	},
 	"forgot": {
 		"title": "パスワードをリセット",
@@ -43,9 +45,14 @@
 		"submit": "パスワードを更新する"
 	},
 	"error": {
-		"invalidEmail": "無効なメールアドレスです",
-		"passwordLength": "パスワードは8文字以上である必要があります",
+		"invalidEmail": "無効なメールアドレス",
+		"passwordLength": "パスワードは8文字以上で入力してください",
 		"invalidToken": "無効または期限切れのトークン",
-		"failedVerification": "ユーザーの確認に失敗しました"
+		"failedVerification": "ユーザーの確認に失敗しました",
+		"conflictUser": "メールアドレス {{email}} のユーザーは既に存在します",
+		"genericError": "登録中にエラーが発生しました。もう一度お試しください。",
+		"emailPasswordRequired": "メールアドレスとパスワードが必要です",
+		"invalidCredentials": "メールアドレスまたはパスワードが無効です",
+		"verifyEmailBeforeLogin": "ログイン前にメールアドレスを確認してください"
 	}
 }

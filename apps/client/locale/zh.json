@@ -21,12 +21,14 @@
 	"login": {
 		"title": "登录到您的账户",
 		"description": "在下面输入您的电子邮件登录",
-		"submit": "登录"
+		"submit": "登录",
+		"loginSuccess": "登录成功！正在重定向..."
 	},
 	"signup": {
 		"title": "创建您的账户",
 		"description": "注册以开始使用 Chatify",
-		"submit": "注册"
+		"submit": "注册",
+		"successMessage": "账户创建成功！请检查您的电子邮件以验证账户。"
 	},
 	"forgot": {
 		"title": "重置您的密码",
@@ -44,8 +46,13 @@
 	},
 	"error": {
 		"invalidEmail": "无效的电子邮件地址",
-		"passwordLength": "密码至少需要8个字符",
-		"invalidToken": "无效或已过期的令牌",
-		"failedVerification": "用户验证失败"
+		"passwordLength": "密码必须至少8个字符",
+		"invalidToken": "无效或过期的令牌",
+		"failedVerification": "验证用户失败",
+		"conflictUser": "电子邮件为 {{email}} 的用户已存在",
+		"genericError": "注册过程中发生错误。请再试一次。",
+		"emailPasswordRequired": "需要电子邮件和密码",
+		"invalidCredentials": "无效的电子邮件或密码",
+		"verifyEmailBeforeLogin": "请在登录前验证您的电子邮件"
 	}
 }

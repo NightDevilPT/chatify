@@ -21,12 +21,14 @@
 	"login": {
 		"title": "Connectez-vous à votre compte",
 		"description": "Entrez votre email ci-dessous pour vous connecter",
-		"submit": "Connexion"
+		"submit": "Connexion",
+		"loginSuccess": "Connexion réussie ! Redirection en cours..."
 	},
 	"signup": {
 		"title": "Créez votre compte",
 		"description": "Inscrivez-vous pour commencer avec Chatify",
-		"submit": "S'inscrire"
+		"submit": "S'inscrire",
+		"successMessage": "Compte créé avec succès ! Veuillez vérifier votre email pour vérifier votre compte."
 	},
 	"forgot": {
 		"title": "Réinitialisez votre mot de passe",
@@ -43,9 +45,14 @@
 		"submit": "Mettre à jour le mot de passe"
 	},
 	"error": {
-		"invalidEmail": "Adresse e-mail invalide",
+		"invalidEmail": "Adresse email invalide",
 		"passwordLength": "Le mot de passe doit contenir au moins 8 caractères",
 		"invalidToken": "Jeton invalide ou expiré",
-		"failedVerification": "Échec de la vérification de l'utilisateur"
+		"failedVerification": "Échec de la vérification de l'utilisateur",
+		"conflictUser": "Un utilisateur avec l'email {{email}} existe déjà",
+		"genericError": "Une erreur s'est produite lors de l'inscription. Veuillez réessayer.",
+		"emailPasswordRequired": "L'email et le mot de passe sont requis",
+		"invalidCredentials": "Email ou mot de passe invalide",
+		"verifyEmailBeforeLogin": "Veuillez vérifier votre email avant de vous connecter"
 	}
 }

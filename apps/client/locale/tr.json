@@ -21,12 +21,14 @@
 	"login": {
 		"title": "Hesabınıza giriş yapın",
 		"description": "Giriş yapmak için aşağıya e-postanızı girin",
-		"submit": "Giriş yap"
+		"submit": "Giriş yap",
+		"loginSuccess": "Giriş başarılı! Yönlendiriliyor..."
 	},
 	"signup": {
 		"title": "Hesabınızı oluşturun",
 		"description": "Chatify ile başlamak için kayıt olun",
-		"submit": "Kayıt ol"
+		"submit": "Kayıt ol",
+		"successMessage": "Hesabınız başarıyla oluşturuldu! Lütfen hesabınızı doğrulamak için e-postanızı kontrol edin."
 	},
 	"forgot": {
 		"title": "Şifrenizi sıfırlayın",
@@ -45,7 +47,12 @@
 	"error": {
 		"invalidEmail": "Geçersiz e-posta adresi",
 		"passwordLength": "Şifre en az 8 karakter olmalıdır",
-		"invalidToken": "Geçersiz veya süresi dolmuş belirteç",
-		"failedVerification": "Kullanıcı doğrulaması başarısız oldu"
+		"invalidToken": "Geçersiz veya süresi dolmuş token",
+		"failedVerification": "Kullanıcı doğrulanamadı",
+		"conflictUser": "{{email}} e-posta adresine sahip kullanıcı zaten var",
+		"genericError": "Kayıt sırasında bir hata oluştu. Lütfen tekrar deneyin.",
+		"emailPasswordRequired": "E-posta ve şifre gereklidir",
+		"invalidCredentials": "Geçersiz e-posta veya şifre",
+		"verifyEmailBeforeLogin": "Lütfen giriş yapmadan önce e-postanızı doğrulayın"
 	}
 }

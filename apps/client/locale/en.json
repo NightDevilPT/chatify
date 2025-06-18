@@ -22,12 +22,14 @@
 	"login": {
 		"title": "Login to your account",
 		"description": "Enter your email below to login to your account",
-		"submit": "Login"
+		"submit": "Login",
+		"loginSuccess": "Login successful! Redirecting..."
 	},
 	"signup": {
 		"title": "Create your account",
 		"description": "Sign up to get started with Chatify",
-		"submit": "Sign up"
+		"submit": "Sign up",
+		"successMessage": "Account created successfully! Please check your email to verify your account."
 	},
 	"forgot": {
 		"title": "Reset your password",
@@ -47,6 +49,11 @@
 		"invalidEmail": "Invalid email address",
 		"passwordLength": "Password must be at least 8 characters",
 		"invalidToken": "Invalid or expired token",
-		"failedVerification": "Failed to verify user"
+		"failedVerification": "Failed to verify user",
+		"conflictUser": "User with email {{email}} already exists",
+		"genericError": "An error occurred during registration. Please try again.",
+		"emailPasswordRequired": "Email and password are required",
+		"invalidCredentials": "Invalid email or password",
+		"verifyEmailBeforeLogin": "Please verify your email before logging in"
 	}
 }

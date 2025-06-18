@@ -21,12 +21,14 @@
 	"login": {
 		"title": "Inicia sesión en tu cuenta",
 		"description": "Ingresa tu correo electrónico para iniciar sesión",
-		"submit": "Iniciar sesión"
+		"submit": "Iniciar sesión",
+		"loginSuccess": "¡Inicio de sesión exitoso! Redirigiendo..."
 	},
 	"signup": {
 		"title": "Crea tu cuenta",
 		"description": "Regístrate para comenzar con Chatify",
-		"submit": "Registrarse"
+		"submit": "Registrarse",
+		"successMessage": "¡Cuenta creada con éxito! Por favor, revisa tu correo electrónico para verificar tu cuenta."
 	},
 	"forgot": {
 		"title": "Restablece tu contraseña",
@@ -46,6 +48,11 @@
 		"invalidEmail": "Dirección de correo electrónico no válida",
 		"passwordLength": "La contraseña debe tener al menos 8 caracteres",
 		"invalidToken": "Token inválido o expirado",
-		"failedVerification": "Error al verificar al usuario"
+		"failedVerification": "No se pudo verificar el usuario",
+		"conflictUser": "El usuario con correo electrónico {{email}} ya existe",
+		"genericError": "Ocurrió un error durante el registro. Por favor, inténtelo de nuevo.",
+		"emailPasswordRequired": "Se requieren correo electrónico y contraseña",
+		"invalidCredentials": "Correo electrónico o contraseña inválidos",
+		"verifyEmailBeforeLogin": "Por favor verifique su correo electrónico antes de iniciar sesión"
 	}
 }
