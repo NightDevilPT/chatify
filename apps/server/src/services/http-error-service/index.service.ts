@@ -7,7 +7,7 @@ import { HttpException, HttpStatus } from '@nestjs/common';
 export class HttpErrorService {
   throwError(errorType: ErrorTypes, context: string): any {
     const statusCode = this.getStatusCode(errorType);
-    const message = `${context}: ${errorType}`;
+    const message = `${context}`;
 
     // Directly throw the exception here
     return new HttpException(message, statusCode);

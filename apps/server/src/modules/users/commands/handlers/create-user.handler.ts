@@ -47,7 +47,7 @@ export class CreateUserHandler implements ICommandHandler<CreateUserCommand> {
         this.logger.error(`User with email ${email} already exists.`);
         throw this.httpErrorService.throwError(
           ErrorTypes.Conflict,
-          `User with email ${email} already exists.`,
+          `conflictUser`,
         );
       }
 

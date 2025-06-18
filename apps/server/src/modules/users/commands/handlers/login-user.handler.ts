@@ -31,6 +31,7 @@ export class LoginUserHandler implements ICommandHandler<LoginCommand> {
       username: string;
       isVerified: boolean;
     };
+    message: string;
   }> {
     const { email, password } = command;
     this.logger.debug(`Attempting login for email: ${email}`);
@@ -40,19 +41,18 @@ export class LoginUserHandler implements ICommandHandler<LoginCommand> {
         this.logger.error('Email and password are required');
         throw this.httpErrorService.throwError(
           ErrorTypes.InvalidInput,
-          'Email and password are required',
+          'emailPasswordRequired',
         );
       }
 
       const user = await this.userRepository.findByEmail(email, true);
       this.logger.debug(`User found: ${user ? user.email : 'None'}`);
-      console.log(user);
 
       if (!user) {
         this.logger.error(`No user found with email: ${email}`);
         throw this.httpErrorService.throwError(
           ErrorTypes.Unauthorized,
-          'Invalid credentials',
+          'invalidCredentials',
         );
       }
 
@@ -60,13 +60,12 @@ export class LoginUserHandler implements ICommandHandler<LoginCommand> {
         password,
         user.password,
       );
-      console.log(passwordMatch, 'passwordMatch');
 
       if (!passwordMatch) {
         this.logger.error(`Invalid password for email: ${email}`);
         throw this.httpErrorService.throwError(
           ErrorTypes.Unauthorized,
-          'Invalid credentials',
+          'invalidCredentials',
         );
       }
 
@@ -74,7 +73,7 @@ export class LoginUserHandler implements ICommandHandler<LoginCommand> {
         this.logger.error(`User not verified: ${email}`);
         throw this.httpErrorService.throwError(
           ErrorTypes.Forbidden,
-          'Please verify your email before logging in',
+          'verifyEmailBeforeLogin',
         );
       }
 
@@ -97,6 +96,7 @@ export class LoginUserHandler implements ICommandHandler<LoginCommand> {
           username: user.username,
           isVerified: user.isVerified,
         },
+        message: 'loginSuccess'
       };
     } catch (error) {
       this.logger.error(`Login failed for email: ${email}`, error);
