@@ -45,6 +45,13 @@
 		"confirmPasswordPlaceholder": "Confirm your new password",
 		"submit": "Update Password"
 	},
+	"verifyUser": {
+		"verificationTokenRequired": "Verification token is required",
+		"inValidVerificationToken": "Invalid verification token",
+		"userAlreadyVerified": "User is already verified",
+		"failedToVerifyUser": "Failed to verify user. Please try again.",
+		"emailVerifiedSuccessfully": "Email verified successfully"
+	},
 	"error": {
 		"invalidEmail": "Invalid email address",
 		"passwordLength": "Password must be at least 8 characters",

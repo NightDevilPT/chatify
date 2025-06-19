@@ -28,7 +28,7 @@ export class VerifyUserHandler implements ICommandHandler<VerifyUserCommand> {
         this.logger.error('No verification token provided');
         throw this.httpErrorService.throwError(
           ErrorTypes.InvalidInput,
-          'Verification token is required',
+          'verificationTokenRequired',
         );
       }
 
@@ -38,7 +38,7 @@ export class VerifyUserHandler implements ICommandHandler<VerifyUserCommand> {
         this.logger.error(`Invalid verification token: ${token}`);
         throw this.httpErrorService.throwError(
           ErrorTypes.NotFound,
-          'Invalid verification token',
+          'inValidVerificationToken',
         );
       }
 
@@ -46,7 +46,7 @@ export class VerifyUserHandler implements ICommandHandler<VerifyUserCommand> {
         this.logger.debug(`User already verified: ${user.email}`);
         return {
           success: true,
-          message: 'User already verified',
+          message: 'userAlreadyVerified',
         };
       }
 
@@ -56,14 +56,14 @@ export class VerifyUserHandler implements ICommandHandler<VerifyUserCommand> {
         this.logger.error(`Failed to verify user with token: ${token}`);
         throw this.httpErrorService.throwError(
           ErrorTypes.InternalServerError,
-          'Failed to verify user',
+          'failedToVerifyUser',
         );
       }
 
       this.logger.debug(`User verified successfully: ${verifiedUser.email}`);
       return {
         success: true,
-        message: 'Email verified successfully',
+        message: 'emailVerifiedSuccessfully',
       };
     } catch (error) {
       this.logger.error(`Verification failed for token: ${token}`, error);
