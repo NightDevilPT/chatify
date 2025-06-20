@@ -36,7 +36,7 @@ export class ForgotPasswordHandler
         this.logger.error('No email provided for password reset');
         throw this.httpErrorService.throwError(
           ErrorTypes.InvalidInput,
-          'Email is required',
+          'emailRequired',
         );
       }
 
@@ -47,7 +47,7 @@ export class ForgotPasswordHandler
         // Return success even if user not found to prevent email enumeration
         throw this.httpErrorService.throwError(
           ErrorTypes.NotFound,
-          'User not found',
+          'userNotFound',
         );
       }
 
@@ -69,7 +69,7 @@ export class ForgotPasswordHandler
         templateName: TemplateEnum.FORGET_PASSWORD,
         payload: {
           username: user.username,
-          url: `${process.env.ORIGIN}/reset-password?token=${resetToken}`,
+          url: `${process.env.ORIGIN}/auth/update-password?token=${resetToken}`,
         },
         to: user.email,
         subject: 'Password Reset Request',
@@ -80,14 +80,10 @@ export class ForgotPasswordHandler
 
       return {
         success: true,
-        message:
-          'If an account exists with this email, a password reset link has been sent',
+        message: 'accountExistPasswordResetLinkSent',
       };
     } catch (error) {
-      this.logger.error(
-        `Failed to process password reset for email: ${email}`,
-        error,
-      );
+      this.logger.error(`errorProcessingForgotPasswordRequest`, error);
       throw this.httpErrorService.handleUnexpectedError(error);
     }
   }

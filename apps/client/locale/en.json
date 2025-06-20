@@ -34,7 +34,11 @@
 	"forgot": {
 		"title": "Reset your password",
 		"description": "Enter your email below to receive password reset mail",
-		"submit": "Send reset email"
+		"submit": "Send reset email",
+		"successMessage": "Password reset link sent to your email.",
+		"emailRequired": "Email is required",
+		"emailNotFound": "Email not found in our records",
+		"accountExistPasswordResetLinkSent": "An account with this email exists. A password reset link has been sent to your email."
 	},
 	"updatePassword": {
 		"title": "Update your password",
@@ -43,7 +47,10 @@
 		"newPasswordPlaceholder": "Enter your new password",
 		"confirmPassword": "Confirm Password",
 		"confirmPasswordPlaceholder": "Confirm your new password",
-		"submit": "Update Password"
+		"submit": "Update Password",
+		"successMessage": "Password reset successfully.",
+		"tokenAndNewPasswordRequired": "Token and new password are required",
+		"passwordSuccessfullyReset": "Password has been successfully reset"
 	},
 	"verifyUser": {
 		"verificationTokenRequired": "Verification token is required",
@@ -61,6 +68,12 @@
 		"genericError": "An error occurred during registration. Please try again.",
 		"emailPasswordRequired": "Email and password are required",
 		"invalidCredentials": "Invalid email or password",
-		"verifyEmailBeforeLogin": "Please verify your email before logging in"
+		"verifyEmailBeforeLogin": "Please verify your email before logging in",
+		"failedForgotPassword": "Failed to send password reset link",
+		"errorProcessingForgotPasswordRequest": "Error processing forgot password request. Please try again later.",
+		"userNotFound": "User not found with the provided email",
+		"passwordsMustMatch": "Passwords must match",
+		"failedResetPassword": "Failed to reset password",
+		"invalidTokenOrResetTokenExpired": "Invalid token or reset token has expired"
 	}
 }

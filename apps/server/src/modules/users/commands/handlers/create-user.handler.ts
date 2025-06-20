@@ -77,7 +77,7 @@ export class CreateUserHandler implements ICommandHandler<CreateUserCommand> {
         templateName: TemplateEnum.VERIFY_EMAIL,
         payload: {
           username: newUser.username,
-          url: `${process.env.ORIGIN}/verify-email?token=${hashToken}`,
+          url: `${process.env.ORIGIN}/auth/verify?token=${hashToken}`,
         },
         to: newUser.email,
         subject: 'Verify your email address',

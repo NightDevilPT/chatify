@@ -32,7 +32,7 @@ export class ResetPasswordHandler
         this.logger.error('Token and new password are required');
         throw this.httpErrorService.throwError(
           ErrorTypes.InvalidInput,
-          'Token and new password are required',
+          'tokenAndNewPasswordRequired',
         );
       }
 
@@ -44,7 +44,7 @@ export class ResetPasswordHandler
         this.logger.error(`Invalid or expired password reset token: ${token}`);
         throw this.httpErrorService.throwError(
           ErrorTypes.NotFound,
-          'Invalid or expired password reset token',
+          'invalidTokenOrResetTokenExpired',
         );
       }
 
@@ -52,7 +52,7 @@ export class ResetPasswordHandler
 
       await this.userRepository.update(user._id.toString(), {
         password: hashedPassword,
-		token: null, // Clear the token after successful reset
+        token: null, // Clear the token after successful reset
       });
 
       this.logger.debug(
@@ -61,7 +61,7 @@ export class ResetPasswordHandler
 
       return {
         success: true,
-        message: 'Password updated successfully',
+        message: 'passwordSuccessfullyReset',
       };
     } catch (error) {
       this.logger.error(`Failed to reset password with token: ${token}`, error);
