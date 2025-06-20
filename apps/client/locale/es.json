@@ -2,57 +2,80 @@
 	"general": {
 		"email": "Correo electrónico",
 		"password": "Contraseña",
-		"emailPlaceholder": "Ingrese su correo electrónico",
+		"emailPlaceholder": "Ingrese su dirección de correo electrónico",
 		"passwordPlaceholder": "Ingrese su contraseña",
 		"forgotPassword": "¿Olvidó su contraseña?",
 		"submit": "Enviar",
 		"googleLogin": "Iniciar sesión con Google",
-		"noAccount": "¿No tienes una cuenta?",
-		"signUp": "Regístrate",
+		"noAccount": "¿No tiene una cuenta?",
+		"signUp": "Registrarse",
 		"login": "Iniciar sesión",
 		"continueWithGoogle": "Continuar con Google",
-		"dontHaveAccount": "¿No tienes una cuenta?",
-		"beBolBeSocial": "Sé audaz, sé social.",
+		"dontHaveAccount": "¿No tiene una cuenta?",
+		"beBolBeSocial": "Sé valiente, sé social.",
 		"username": "Nombre de usuario",
 		"usernamePlaceholder": "Ingrese su nombre de usuario",
-		"alreadyHaveAccount": "¿Ya tienes una cuenta?",
+		"alreadyHaveAccount": "¿Ya tiene una cuenta?",
+		"loading": "Cargando...",
 		"userVerifiedSuccess": "Usuario verificado con éxito"
 	},
 	"login": {
-		"title": "Inicia sesión en tu cuenta",
-		"description": "Ingresa tu correo electrónico para iniciar sesión",
+		"title": "Inicie sesión en su cuenta",
+		"description": "Ingrese su correo electrónico para iniciar sesión en su cuenta",
 		"submit": "Iniciar sesión",
 		"loginSuccess": "¡Inicio de sesión exitoso! Redirigiendo..."
 	},
 	"signup": {
-		"title": "Crea tu cuenta",
-		"description": "Regístrate para comenzar con Chatify",
+		"title": "Cree su cuenta",
+		"description": "Regístrese para comenzar con Chatify",
 		"submit": "Registrarse",
-		"successMessage": "¡Cuenta creada con éxito! Por favor, revisa tu correo electrónico para verificar tu cuenta."
+		"successMessage": "¡Cuenta creada con éxito! Por favor, revise su correo electrónico para verificar su cuenta."
 	},
 	"forgot": {
-		"title": "Restablece tu contraseña",
-		"description": "Ingresa tu correo electrónico para recibir instrucciones de restablecimiento",
-		"submit": "Enviar correo de restablecimiento"
+		"title": "Restablecer su contraseña",
+		"description": "Ingrese su correo electrónico para recibir un correo de restablecimiento de contraseña",
+		"submit": "Enviar correo de restablecimiento",
+		"successMessage": "Enlace de restablecimiento de contraseña enviado a su correo electrónico.",
+		"emailRequired": "Se requiere correo electrónico",
+		"emailNotFound": "Correo electrónico no encontrado en nuestros registros",
+		"accountExistPasswordResetLinkSent": "Existe una cuenta con este correo electrónico. Se ha enviado un enlace de restablecimiento de contraseña a su correo."
 	},
 	"updatePassword": {
-		"title": "Actualiza tu contraseña",
-		"description": "Introduce tu nueva contraseña a continuación",
+		"title": "Actualizar su contraseña",
+		"description": "Ingrese su nueva contraseña a continuación",
 		"newPassword": "Nueva contraseña",
-		"newPasswordPlaceholder": "Introduce tu nueva contraseña",
+		"newPasswordPlaceholder": "Ingrese su nueva contraseña",
 		"confirmPassword": "Confirmar contraseña",
-		"confirmPasswordPlaceholder": "Confirma tu nueva contraseña",
-		"submit": "Actualizar contraseña"
+		"confirmPasswordPlaceholder": "Confirme su nueva contraseña",
+		"submit": "Actualizar contraseña",
+		"success": "Contraseña restablecida con éxito",
+		"tokenAndNewPasswordRequired": "Se requiere token y nueva contraseña",
+		"passwordSuccessfullyReset": "La contraseña se ha restablecido con éxito"
+	},
+	"verifyUser": {
+		"verificationTokenRequired": "Se requiere token de verificación",
+		"inValidVerificationToken": "Token de verificación inválido",
+		"userAlreadyVerified": "El usuario ya está verificado",
+		"failedToVerifyUser": "No se pudo verificar el usuario. Por favor, intenta de nuevo.",
+		"emailVerifiedSuccessfully": "Correo electrónico verificado con éxito"
 	},
 	"error": {
-		"invalidEmail": "Dirección de correo electrónico no válida",
+		"invalidEmail": "Dirección de correo electrónico inválida",
 		"passwordLength": "La contraseña debe tener al menos 8 caracteres",
 		"invalidToken": "Token inválido o expirado",
 		"failedVerification": "No se pudo verificar el usuario",
-		"conflictUser": "El usuario con correo electrónico {{email}} ya existe",
-		"genericError": "Ocurrió un error durante el registro. Por favor, inténtelo de nuevo.",
-		"emailPasswordRequired": "Se requieren correo electrónico y contraseña",
+		"conflictUser": "El usuario con el correo {{email}} ya existe",
+		"genericError": "Ocurrió un error durante el registro. Por favor, intenta de nuevo.",
+		"emailPasswordRequired": "Se requiere correo electrónico y contraseña",
 		"invalidCredentials": "Correo electrónico o contraseña inválidos",
-		"verifyEmailBeforeLogin": "Por favor verifique su correo electrónico antes de iniciar sesión"
+		"verifyEmailBeforeLogin": "Por favor, verifica tu correo electrónico antes de iniciar sesión",
+		"failedForgotPassword": "No se pudo enviar el enlace de restablecimiento de contraseña",
+		"errorProcessingForgotPasswordRequest": "Error al procesar la solicitud de restablecimiento de contraseña. Por favor, intenta de nuevo más tarde.",
+		"userNotFound": "Usuario no encontrado con el correo electrónico proporcionado",
+		"passwordsMustMatch": "Las contraseñas deben coincidir",
+		"failedResetPassword": "No se pudo restablecer la contraseña",
+		"invalidTokenOrResetTokenExpired": "Token inválido o el token de restablecimiento ha expirado",
+		"Token and new password are required": "Se requiere token y nueva contraseña",
+		"Invalid or expired password reset token": "Token de restablecimiento de contraseña inválido o expirado"
 	}
 }

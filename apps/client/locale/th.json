@@ -2,57 +2,80 @@
 	"general": {
 		"email": "อีเมล",
 		"password": "รหัสผ่าน",
-		"emailPlaceholder": "กรอกที่อยู่อีเมลของคุณ",
-		"passwordPlaceholder": "กรอกรหัสผ่านของคุณ",
+		"emailPlaceholder": "กรุณากรอกที่อยู่อีเมลของคุณ",
+		"passwordPlaceholder": "กรุณากรอกรหัสผ่านของคุณ",
 		"forgotPassword": "ลืมรหัสผ่านหรือไม่?",
 		"submit": "ส่ง",
-		"googleLogin": "เข้าสู่ระบบด้วย Google",
-		"noAccount": "ยังไม่มีบัญชีใช่ไหม?",
+		"googleLogin": "ลงชื่อเข้าใช้ด้วย Google",
+		"noAccount": "ยังไม่มีบัญชี?",
 		"signUp": "สมัครสมาชิก",
-		"login": "เข้าสู่ระบบ",
+		"login": "ลงชื่อเข้าใช้",
 		"continueWithGoogle": "ดำเนินการต่อด้วย Google",
-		"dontHaveAccount": "ยังไม่มีบัญชีใช่ไหม?",
-		"beBolBeSocial": "กล้าหาญและเป็นสังคม",
+		"dontHaveAccount": "ยังไม่มีบัญชี?",
+		"beBolBeSocial": "กล้าที่จะเป็นตัวคุณ สังคมที่เป็นมิตร",
 		"username": "ชื่อผู้ใช้",
-		"usernamePlaceholder": "กรอกชื่อผู้ใช้ของคุณ",
-		"alreadyHaveAccount": "มีบัญชีอยู่แล้วหรือไม่?",
-		"userVerifiedSuccess": "ยืนยันผู้ใช้สำเร็จแล้ว"
+		"usernamePlaceholder": "กรุณากรอกชื่อผู้ใช้ของคุณ",
+		"alreadyHaveAccount": "มีบัญชีอยู่แล้ว?",
+		"loading": "กำลังโหลด...",
+		"userVerifiedSuccess": "ยืนยันผู้ใช้สำเร็จ"
 	},
 	"login": {
-		"title": "เข้าสู่ระบบบัญชีของคุณ",
-		"description": "กรอกอีเมลของคุณด้านล่างเพื่อลงชื่อเข้าใช้",
-		"submit": "เข้าสู่ระบบ",
-		"loginSuccess": "เข้าสู่ระบบสำเร็จ! กำลังเปลี่ยนเส้นทาง..."
+		"title": "ลงชื่อเข้าใช้บัญชีของคุณ",
+		"description": "กรอกอีเมลของคุณด้านล่างเพื่อลงชื่อเข้าใช้บัญชีของคุณ",
+		"submit": "ลงชื่อเข้าใช้",
+		"loginSuccess": "ลงชื่อเข้าใช้สำเร็จ! กำลังเปลี่ยนเส้นทาง..."
 	},
 	"signup": {
 		"title": "สร้างบัญชีของคุณ",
 		"description": "สมัครสมาชิกเพื่อเริ่มต้นกับ Chatify",
 		"submit": "สมัครสมาชิก",
-		"successMessage": "สร้างบัญชีสำเร็จแล้ว! กรุณาตรวจสอบอีเมลของคุณเพื่อยืนยันบัญชี"
+		"successMessage": "สร้างบัญชีสำเร็จ! กรุณาตรวจสอบอีเมลของคุณเพื่อยืนยันบัญชี"
 	},
 	"forgot": {
 		"title": "รีเซ็ตรหัสผ่านของคุณ",
-		"description": "กรอกอีเมลของคุณเพื่อรับคำแนะนำในการรีเซ็ต",
-		"submit": "ส่งอีเมลรีเซ็ต"
+		"description": "กรอกอีเมลของคุณด้านล่างเพื่อรับอีเมลรีเซ็ตรหัสผ่าน",
+		"submit": "ส่งอีเมลรีเซ็ต",
+		"successMessage": "ลิงก์รีเซ็ตรหัสผ่านถูกส่งไปยังอีเมลของคุณแล้ว",
+		"emailRequired": "ต้องระบุอีเมล",
+		"emailNotFound": "ไม่พบอีเมลในบันทึกของเรา",
+		"accountExistPasswordResetLinkSent": "มีบัญชีที่ใช้อีเมลนี้อยู่แล้ว ลิงก์รีเซ็ตรหัสผ่านถูกส่งไปยังอีเมลของคุณ"
 	},
 	"updatePassword": {
 		"title": "อัปเดตรหัสผ่านของคุณ",
-		"description": "กรอกรหัสผ่านใหม่ของคุณด้านล่าง",
+		"description": "กรุณากรอกรหัสผ่านใหม่ด้านล่าง",
 		"newPassword": "รหัสผ่านใหม่",
-		"newPasswordPlaceholder": "กรอกรหัสผ่านใหม่ของคุณ",
+		"newPasswordPlaceholder": "กรุณากรอกรหัสผ่านใหม่",
 		"confirmPassword": "ยืนยันรหัสผ่าน",
 		"confirmPasswordPlaceholder": "ยืนยันรหัสผ่านใหม่ของคุณ",
-		"submit": "อัปเดตรหัสผ่าน"
+		"submit": "อัปเดตรหัสผ่าน",
+		"success": "รีเซ็ตรหัสผ่านสำเร็จ",
+		"tokenAndNewPasswordRequired": "ต้องระบุโทเค็นและรหัสผ่านใหม่",
+		"passwordSuccessfullyReset": "รีเซ็ตรหัสผ่านสำเร็จ"
+	},
+	"verifyUser": {
+		"verificationTokenRequired": "ต้องระบุโทเค็นยืนยัน",
+		"inValidVerificationToken": "โทเค็นยืนยันไม่ถูกต้อง",
+		"userAlreadyVerified": "ผู้ใช้ได้รับการยืนยันแล้ว",
+		"failedToVerifyUser": "ไม่สามารถยืนยันผู้ใช้ได้ กรุณาลองใหม่",
+		"emailVerifiedSuccessfully": "ยืนยันอีเมลสำเร็จ"
 	},
 	"error": {
 		"invalidEmail": "ที่อยู่อีเมลไม่ถูกต้อง",
 		"passwordLength": "รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษร",
 		"invalidToken": "โทเค็นไม่ถูกต้องหรือหมดอายุ",
-		"failedVerification": "ยืนยันผู้ใช้ไม่สำเร็จ",
-		"conflictUser": "มีผู้ใช้ที่ใช้อีเมล {{email}} อยู่แล้ว",
-		"genericError": "เกิดข้อผิดพลาดในการลงทะเบียน กรุณาลองอีกครั้ง",
+		"failedVerification": "การยืนยันผู้ใช้ล้มเหลว",
+		"conflictUser": "ผู้ใช้ที่มีอีเมล {{email}} มีอยู่แล้ว",
+		"genericError": "เกิดข้อผิดพลาดระหว่างการลงทะเบียน กรุณาลองใหม่",
 		"emailPasswordRequired": "ต้องระบุอีเมลและรหัสผ่าน",
 		"invalidCredentials": "อีเมลหรือรหัสผ่านไม่ถูกต้อง",
-		"verifyEmailBeforeLogin": "กรุณายืนยันอีเมลของคุณก่อนเข้าสู่ระบบ"
+		"verifyEmailBeforeLogin": "กรุณายืนยันอีเมลของคุณก่อนลงชื่อเข้าใช้",
+		"failedForgotPassword": "ไม่สามารถส่งลิงก์รีเซ็ตรหัสผ่านได้",
+		"errorProcessingForgotPasswordRequest": "เกิดข้อผิดพลาดในการประมวลผลคำขอรีเซ็ตรหัสผ่าน กรุณาลองใหม่ในภายหลัง",
+		"userNotFound": "ไม่พบผู้ใช้ที่มีอีเมลที่ให้มา",
+		"passwordsMustMatch": "รหัสผ่านต้องตรงกัน",
+		"failedResetPassword": "ไม่สามารถรีเซ็ตรหัสผ่านได้",
+		"invalidTokenOrResetTokenExpired": "โทเค็นไม่ถูกต้องหรือโทเค็นรีเซ็ตหมดอายุ",
+		"Token and new password are required": "ต้องระบุโทเค็นและรหัสผ่านใหม่",
+		"Invalid or expired password reset token": "โทเค็นรีเซ็ตรหัสผ่านไม่ถูกต้องหรือหมดอายุ"
 	}
 }

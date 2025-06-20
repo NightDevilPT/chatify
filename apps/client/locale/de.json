@@ -7,52 +7,75 @@
 		"forgotPassword": "Passwort vergessen?",
 		"submit": "Absenden",
 		"googleLogin": "Mit Google anmelden",
-		"noAccount": "Noch keinen Account?",
+		"noAccount": "Haben Sie kein Konto?",
 		"signUp": "Registrieren",
 		"login": "Anmelden",
-		"continueWithGoogle": "Weiter mit Google",
-		"dontHaveAccount": "Noch keinen Account?",
+		"continueWithGoogle": "Mit Google fortfahren",
+		"dontHaveAccount": "Haben Sie kein Konto?",
 		"beBolBeSocial": "Sei mutig, sei sozial.",
 		"username": "Benutzername",
 		"usernamePlaceholder": "Geben Sie Ihren Benutzernamen ein",
-		"alreadyHaveAccount": "Schon einen Account?",
+		"alreadyHaveAccount": "Haben Sie bereits ein Konto?",
+		"loading": "Laden...",
 		"userVerifiedSuccess": "Benutzer erfolgreich verifiziert"
 	},
 	"login": {
-		"title": "Melden Sie sich bei Ihrem Konto an",
-		"description": "Geben Sie unten Ihre E-Mail-Adresse ein, um sich anzumelden",
+		"title": "In Ihr Konto einloggen",
+		"description": "Geben Sie Ihre E-Mail-Adresse ein, um sich in Ihr Konto einzuloggen",
 		"submit": "Anmelden",
 		"loginSuccess": "Anmeldung erfolgreich! Weiterleitung..."
 	},
 	"signup": {
 		"title": "Erstellen Sie Ihr Konto",
-		"description": "Registrieren Sie sich, um mit Chatify zu starten",
+		"description": "Registrieren Sie sich, um mit Chatify zu beginnen",
 		"submit": "Registrieren",
 		"successMessage": "Konto erfolgreich erstellt! Bitte überprüfen Sie Ihre E-Mail, um Ihr Konto zu verifizieren."
 	},
 	"forgot": {
-		"title": "Setzen Sie Ihr Passwort zurück",
-		"description": "Geben Sie unten Ihre E-Mail-Adresse ein, um Anweisungen zum Zurücksetzen des Passworts zu erhalten",
-		"submit": "Reset-E-Mail senden"
+		"title": "Passwort zurücksetzen",
+		"description": "Geben Sie Ihre E-Mail-Adresse ein, um eine E-Mail zum Zurücksetzen des Passworts zu erhalten",
+		"submit": "E-Mail zum Zurücksetzen senden",
+		"successMessage": "Link zum Zurücksetzen des Passworts an Ihre E-Mail gesendet.",
+		"emailRequired": "E-Mail-Adresse erforderlich",
+		"emailNotFound": "E-Mail-Adresse nicht in unseren Daten gefunden",
+		"accountExistPasswordResetLinkSent": "Ein Konto mit dieser E-Mail existiert. Ein Link zum Zurücksetzen des Passworts wurde an Ihre E-Mail gesendet."
 	},
 	"updatePassword": {
-		"title": "Aktualisiere dein Passwort",
-		"description": "Gib unten dein neues Passwort ein",
+		"title": "Passwort aktualisieren",
+		"description": "Geben Sie Ihr neues Passwort ein",
 		"newPassword": "Neues Passwort",
-		"newPasswordPlaceholder": "Gib dein neues Passwort ein",
+		"newPasswordPlaceholder": "Geben Sie Ihr neues Passwort ein",
 		"confirmPassword": "Passwort bestätigen",
-		"confirmPasswordPlaceholder": "Bestätige dein neues Passwort",
-		"submit": "Passwort aktualisieren"
+		"confirmPasswordPlaceholder": "Bestätigen Sie Ihr neues Passwort",
+		"submit": "Passwort aktualisieren",
+		"success": "Passwort erfolgreich zurückgesetzt",
+		"tokenAndNewPasswordRequired": "Token und neues Passwort erforderlich",
+		"passwordSuccessfullyReset": "Passwort wurde erfolgreich zurückgesetzt"
+	},
+	"verifyUser": {
+		"verificationTokenRequired": "Verifizierungstoken erforderlich",
+		"inValidVerificationToken": "Ungültiges Verifizierungstoken",
+		"userAlreadyVerified": "Benutzer ist bereits verifiziert",
+		"failedToVerifyUser": "Benutzer konnte nicht verifiziert werden. Bitte versuchen Sie es erneut.",
+		"emailVerifiedSuccessfully": "E-Mail erfolgreich verifiziert"
 	},
 	"error": {
 		"invalidEmail": "Ungültige E-Mail-Adresse",
 		"passwordLength": "Passwort muss mindestens 8 Zeichen lang sein",
 		"invalidToken": "Ungültiges oder abgelaufenes Token",
-		"failedVerification": "Benutzer konnte nicht verifiziert werden",
-		"conflictUser": "Benutzer mit E-Mail {{email}} existiert bereits",
-		"genericError": "Bei der Registrierung ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
-		"emailPasswordRequired": "E-Mail und Passwort sind erforderlich",
-		"invalidCredentials": "Ungültige E-Mail oder ungültiges Passwort",
-		"verifyEmailBeforeLogin": "Bitte verifizieren Sie Ihre E-Mail bevor Sie sich anmelden"
+		"failedVerification": "Verifizierung des Benutzers fehlgeschlagen",
+		"conflictUser": "Benutzer mit der E-Mail {{email}} existiert bereits",
+		"genericError": "Ein Fehler ist bei der Registrierung aufgetreten. Bitte versuchen Sie es erneut.",
+		"emailPasswordRequired": "E-Mail und Passwort erforderlich",
+		"invalidCredentials": "Ungültige E-Mail oder Passwort",
+		"verifyEmailBeforeLogin": "Bitte verifizieren Sie Ihre E-Mail vor dem Einloggen",
+		"failedForgotPassword": "Fehler beim Senden des Links zum Zurücksetzen des Passworts",
+		"errorProcessingForgotPasswordRequest": "Fehler bei der Verarbeitung der Anfrage zum Zurücksetzen des Passworts. Bitte versuchen Sie es später erneut.",
+		"userNotFound": "Benutzer mit der angegebenen E-Mail nicht gefunden",
+		"passwordsMustMatch": "Passwörter müssen übereinstimmen",
+		"failedResetPassword": "Fehler beim Zurücksetzen des Passworts",
+		"invalidTokenOrResetTokenExpired": "Ungültiges Token oder Zurücksetzungs-Token abgelaufen",
+		"Token and new password are required": "Token und neues Passwort erforderlich",
+		"Invalid or expired password reset token": "Ungültiges oder abgelaufenes Passwort-Zurücksetzungs-Token"
 	}
 }

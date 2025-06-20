@@ -8,51 +8,74 @@
 		"submit": "Gönder",
 		"googleLogin": "Google ile giriş yap",
 		"noAccount": "Hesabınız yok mu?",
-		"signUp": "Kayıt ol",
+		"signUp": "Kaydol",
 		"login": "Giriş yap",
 		"continueWithGoogle": "Google ile devam et",
 		"dontHaveAccount": "Hesabınız yok mu?",
 		"beBolBeSocial": "Cesur ol, sosyal ol.",
 		"username": "Kullanıcı adı",
 		"usernamePlaceholder": "Kullanıcı adınızı girin",
-		"alreadyHaveAccount": "Zaten hesabınız var mı?",
+		"alreadyHaveAccount": "Zaten bir hesabınız var mı?",
+		"loading": "Yükleniyor...",
 		"userVerifiedSuccess": "Kullanıcı başarıyla doğrulandı"
 	},
 	"login": {
 		"title": "Hesabınıza giriş yapın",
-		"description": "Giriş yapmak için aşağıya e-postanızı girin",
+		"description": "Hesabınıza giriş yapmak için aşağıya e-posta adresinizi girin",
 		"submit": "Giriş yap",
 		"loginSuccess": "Giriş başarılı! Yönlendiriliyor..."
 	},
 	"signup": {
 		"title": "Hesabınızı oluşturun",
-		"description": "Chatify ile başlamak için kayıt olun",
-		"submit": "Kayıt ol",
-		"successMessage": "Hesabınız başarıyla oluşturuldu! Lütfen hesabınızı doğrulamak için e-postanızı kontrol edin."
+		"description": "Chatify ile başlamak için kaydolun",
+		"submit": "Kaydol",
+		"successMessage": "Hesap başarıyla oluşturuldu! Hesabınızı doğrulamak için e-postanızı kontrol edin."
 	},
 	"forgot": {
 		"title": "Şifrenizi sıfırlayın",
-		"description": "Şifre sıfırlama talimatlarını almak için e-postanızı girin",
-		"submit": "Sıfırlama e-postası gönder"
+		"description": "Şifre sıfırlama e-postası almak için aşağıya e-posta adresinizi girin",
+		"submit": "Sıfırlama e-postası gönder",
+		"successMessage": "Şifre sıfırlama bağlantısı e-postanıza gönderildi.",
+		"emailRequired": "E-posta gerekli",
+		"emailNotFound": "Kayıtlarımızda e-posta bulunamadı",
+		"accountExistPasswordResetLinkSent": "Bu e-posta ile bir hesap mevcut. Şifre sıfırlama bağlantısı e-postanıza gönderildi."
 	},
 	"updatePassword": {
 		"title": "Şifrenizi güncelleyin",
 		"description": "Yeni şifrenizi aşağıya girin",
-		"newPassword": "Yeni Şifre",
+		"newPassword": "Yeni şifre",
 		"newPasswordPlaceholder": "Yeni şifrenizi girin",
-		"confirmPassword": "Şifreyi Onayla",
-		"confirmPasswordPlaceholder": "Yeni şifrenizi onaylayın",
-		"submit": "Şifreyi Güncelle"
+		"confirmPassword": "Şifreyi onayla",
+		"confirmPasswordPlaceholder": "Yeni şifrenizi tekrar girin",
+		"submit": "Şifreyi güncelle",
+		"success": "Şifre başarıyla sıfırlandı",
+		"tokenAndNewPasswordRequired": "Token ve yeni şifre gerekli",
+		"passwordSuccessfullyReset": "Şifre başarıyla sıfırlandı"
+	},
+	"verifyUser": {
+		"verificationTokenRequired": "Doğrulama tokenı gerekli",
+		"inValidVerificationToken": "Geçersiz doğrulama tokenı",
+		"userAlreadyVerified": "Kullanıcı zaten doğrulandı",
+		"failedToVerifyUser": "Kullanıcı doğrulanamadı. Lütfen tekrar deneyin.",
+		"emailVerifiedSuccessfully": "E-posta başarıyla doğrulandı"
 	},
 	"error": {
 		"invalidEmail": "Geçersiz e-posta adresi",
-		"passwordLength": "Şifre en az 8 karakter olmalıdır",
+		"passwordLength": "Şifre en az 8 karakter olmalı",
 		"invalidToken": "Geçersiz veya süresi dolmuş token",
-		"failedVerification": "Kullanıcı doğrulanamadı",
-		"conflictUser": "{{email}} e-posta adresine sahip kullanıcı zaten var",
+		"failedVerification": "Kullanıcı doğrulaması başarısız",
+		"conflictUser": "{{email}} e-postası ile kullanıcı zaten mevcut",
 		"genericError": "Kayıt sırasında bir hata oluştu. Lütfen tekrar deneyin.",
-		"emailPasswordRequired": "E-posta ve şifre gereklidir",
+		"emailPasswordRequired": "E-posta ve şifre gerekli",
 		"invalidCredentials": "Geçersiz e-posta veya şifre",
-		"verifyEmailBeforeLogin": "Lütfen giriş yapmadan önce e-postanızı doğrulayın"
+		"verifyEmailBeforeLogin": "Giriş yapmadan önce e-postanızı doğrulayın",
+		"failedForgotPassword": "Şifre sıfırlama bağlantısı gönderilemedi",
+		"errorProcessingForgotPasswordRequest": "Şifre sıfırlama isteği işlenirken hata oluştu. Lütfen daha sonra tekrar deneyin.",
+		"userNotFound": "Sağlanan e-posta ile kullanıcı bulunamadı",
+		"passwordsMustMatch": "Şifreler eşleşmeli",
+		"failedResetPassword": "Şifre sıfırlama başarısız",
+		"invalidTokenOrResetTokenExpired": "Geçersiz token veya sıfırlama tokenı süresi dolmuş",
+		"Token and new password are required": "Token ve yeni şifre gerekli",
+		"Invalid or expired password reset token": "Geçersiz veya süresi dolmuş şifre sıfırlama tokenı"
 	}
 }

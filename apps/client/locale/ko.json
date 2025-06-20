@@ -15,44 +15,67 @@
 		"beBolBeSocial": "대담하게, 사교적으로.",
 		"username": "사용자 이름",
 		"usernamePlaceholder": "사용자 이름을 입력하세요",
-		"alreadyHaveAccount": "이미 계정이 있나요?",
+		"alreadyHaveAccount": "이미 계정이 있으신가요?",
+		"loading": "로딩 중...",
 		"userVerifiedSuccess": "사용자가 성공적으로 인증되었습니다"
 	},
 	"login": {
 		"title": "계정에 로그인",
-		"description": "로그인하려면 아래에 이메일을 입력하세요",
+		"description": "계정에 로그인하려면 아래에 이메일을 입력하세요",
 		"submit": "로그인",
 		"loginSuccess": "로그인 성공! 리디렉션 중..."
 	},
 	"signup": {
-		"title": "계정 만들기",
+		"title": "계정 생성",
 		"description": "Chatify를 시작하려면 가입하세요",
 		"submit": "가입하기",
-		"successMessage": "계정이 성공적으로 생성되었습니다! 계정을 확인하려면 이메일을 확인하세요."
+		"successMessage": "계정이 성공적으로 생성되었습니다! 계정을 인증하려면 이메일을 확인하세요."
 	},
 	"forgot": {
 		"title": "비밀번호 재설정",
-		"description": "비밀번호 재설정 안내를 받으려면 이메일을 입력하세요",
-		"submit": "재설정 이메일 보내기"
+		"description": "비밀번호 재설정 메일을 받으려면 아래에 이메일을 입력하세요",
+		"submit": "재설정 메일 보내기",
+		"successMessage": "비밀번호 재설정 링크가 이메일로 전송되었습니다.",
+		"emailRequired": "이메일이 필요합니다",
+		"emailNotFound": "기록에서 이메일을 찾을 수 없습니다",
+		"accountExistPasswordResetLinkSent": "이 이메일로 계정이 존재합니다. 비밀번호 재설정 링크가 이메일로 전송되었습니다."
 	},
 	"updatePassword": {
-		"title": "비밀번호 변경",
+		"title": "비밀번호 업데이트",
 		"description": "아래에 새 비밀번호를 입력하세요",
 		"newPassword": "새 비밀번호",
 		"newPasswordPlaceholder": "새 비밀번호를 입력하세요",
 		"confirmPassword": "비밀번호 확인",
-		"confirmPasswordPlaceholder": "새 비밀번호를 확인하세요",
-		"submit": "비밀번호 변경"
+		"confirmPasswordPlaceholder": "새 비밀번호를 다시 입력하세요",
+		"submit": "비밀번호 업데이트",
+		"success": "비밀번호가 성공적으로 재설정되었습니다",
+		"tokenAndNewPasswordRequired": "토큰과 새 비밀번호가 필요합니다",
+		"passwordSuccessfullyReset": "비밀번호가 성공적으로 재설정되었습니다"
+	},
+	"verifyUser": {
+		"verificationTokenRequired": "인증 토큰이 필요합니다",
+		"inValidVerificationToken": "유효하지 않은 인증 토큰",
+		"userAlreadyVerified": "사용자가 이미 인증되었습니다",
+		"failedToVerifyUser": "사용자 인증에 실패했습니다. 다시 시도하세요.",
+		"emailVerifiedSuccessfully": "이메일이 성공적으로 인증되었습니다"
 	},
 	"error": {
 		"invalidEmail": "유효하지 않은 이메일 주소",
 		"passwordLength": "비밀번호는 최소 8자 이상이어야 합니다",
 		"invalidToken": "유효하지 않거나 만료된 토큰",
-		"failedVerification": "사용자 확인에 실패했습니다",
-		"conflictUser": "이메일 {{email}} 사용자가 이미 존재합니다",
-		"genericError": "등록 중 오류가 발생했습니다. 다시 시도해 주세요.",
+		"failedVerification": "사용자 인증에 실패했습니다",
+		"conflictUser": "{{email}} 이메일로 사용자가 이미 존재합니다",
+		"genericError": "등록 중 오류가 발생했습니다. 다시 시도하세요.",
 		"emailPasswordRequired": "이메일과 비밀번호가 필요합니다",
-		"invalidCredentials": "잘못된 이메일 또는 비밀번호",
-		"verifyEmailBeforeLogin": "로그인하기 전에 이메일을 인증해 주세요"
+		"invalidCredentials": "유효하지 않은 이메일 또는 비밀번호",
+		"verifyEmailBeforeLogin": "로그인하기 전에 이메일을 인증하세요",
+		"failedForgotPassword": "비밀번호 재설정 링크 전송에 실패했습니다",
+		"errorProcessingForgotPasswordRequest": "비밀번호 재설정 요청 처리 중 오류가 발생했습니다. 나중에 다시 시도하세요.",
+		"userNotFound": "제공된 이메일로 사용자를 찾을 수 없습니다",
+		"passwordsMustMatch": "비밀번호가 일치해야 합니다",
+		"failedResetPassword": "비밀번호 재설정에 실패했습니다",
+		"invalidTokenOrResetTokenExpired": "유효하지 않은 토큰 또는 재설정 토큰이 만료되었습니다",
+		"Token and new password are required": "토큰과 새 비밀번호가 필요합니다",
+		"Invalid or expired password reset token": "유효하지 않거나 만료된 비밀번호 재설정 토큰"
 	}
 }

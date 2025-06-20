@@ -1,58 +1,81 @@
 {
 	"general": {
-		"email": "Email",
+		"email": "E-mail",
 		"password": "Mot de passe",
-		"emailPlaceholder": "Entrez votre adresse email",
+		"emailPlaceholder": "Entrez votre adresse e-mail",
 		"passwordPlaceholder": "Entrez votre mot de passe",
 		"forgotPassword": "Mot de passe oublié ?",
-		"submit": "Envoyer",
+		"submit": "Soumettre",
 		"googleLogin": "Se connecter avec Google",
 		"noAccount": "Vous n'avez pas de compte ?",
 		"signUp": "S'inscrire",
-		"login": "Connexion",
+		"login": "Se connecter",
 		"continueWithGoogle": "Continuer avec Google",
 		"dontHaveAccount": "Vous n'avez pas de compte ?",
 		"beBolBeSocial": "Soyez audacieux, soyez social.",
 		"username": "Nom d'utilisateur",
 		"usernamePlaceholder": "Entrez votre nom d'utilisateur",
 		"alreadyHaveAccount": "Vous avez déjà un compte ?",
+		"loading": "Chargement...",
 		"userVerifiedSuccess": "Utilisateur vérifié avec succès"
 	},
 	"login": {
 		"title": "Connectez-vous à votre compte",
-		"description": "Entrez votre email ci-dessous pour vous connecter",
-		"submit": "Connexion",
-		"loginSuccess": "Connexion réussie ! Redirection en cours..."
+		"description": "Entrez votre e-mail ci-dessous pour vous connecter à votre compte",
+		"submit": "Se connecter",
+		"loginSuccess": "Connexion réussie ! Redirection..."
 	},
 	"signup": {
 		"title": "Créez votre compte",
 		"description": "Inscrivez-vous pour commencer avec Chatify",
 		"submit": "S'inscrire",
-		"successMessage": "Compte créé avec succès ! Veuillez vérifier votre email pour vérifier votre compte."
+		"successMessage": "Compte créé avec succès ! Veuillez vérifier votre e-mail pour activer votre compte."
 	},
 	"forgot": {
-		"title": "Réinitialisez votre mot de passe",
-		"description": "Entrez votre email ci-dessous pour recevoir les instructions de réinitialisation",
-		"submit": "Envoyer le mail de réinitialisation"
+		"title": "Réinitialiser votre mot de passe",
+		"description": "Entrez votre e-mail pour recevoir un e-mail de réinitialisation du mot de passe",
+		"submit": "Envoyer l'e-mail de réinitialisation",
+		"successMessage": "Lien de réinitialisation du mot de passe envoyé à votre e-mail.",
+		"emailRequired": "L'e-mail est requis",
+		"emailNotFound": "E-mail non trouvé dans nos registres",
+		"accountExistPasswordResetLinkSent": "Un compte avec cet e-mail existe. Un lien de réinitialisation du mot de passe a été envoyé à votre e-mail."
 	},
 	"updatePassword": {
-		"title": "Mettez à jour votre mot de passe",
+		"title": "Mettre à jour votre mot de passe",
 		"description": "Entrez votre nouveau mot de passe ci-dessous",
 		"newPassword": "Nouveau mot de passe",
 		"newPasswordPlaceholder": "Entrez votre nouveau mot de passe",
-		"confirmPassword": "Confirmez le mot de passe",
+		"confirmPassword": "Confirmer le mot de passe",
 		"confirmPasswordPlaceholder": "Confirmez votre nouveau mot de passe",
-		"submit": "Mettre à jour le mot de passe"
+		"submit": "Mettre à jour le mot de passe",
+		"success": "Mot de passe réinitialisé avec succès",
+		"tokenAndNewPasswordRequired": "Token et nouveau mot de passe requis",
+		"passwordSuccessfullyReset": "Le mot de passe a été réinitialisé avec succès"
+	},
+	"verifyUser": {
+		"verificationTokenRequired": "Token de vérification requis",
+		"inValidVerificationToken": "Token de vérification invalide",
+		"userAlreadyVerified": "L'utilisateur est déjà vérifié",
+		"failedToVerifyUser": "Échec de la vérification de l'utilisateur. Veuillez réessayer.",
+		"emailVerifiedSuccessfully": "E-mail vérifié avec succès"
 	},
 	"error": {
-		"invalidEmail": "Adresse email invalide",
-		"passwordLength": "Le mot de passe doit contenir au moins 8 caractères",
-		"invalidToken": "Jeton invalide ou expiré",
+		"invalidEmail": "Adresse e-mail invalide",
+		"passwordLength": "Le mot de passe doit comporter au moins 8 caractères",
+		"invalidToken": "Token invalide ou expiré",
 		"failedVerification": "Échec de la vérification de l'utilisateur",
-		"conflictUser": "Un utilisateur avec l'email {{email}} existe déjà",
+		"conflictUser": "L'utilisateur avec l'e-mail {{email}} existe déjà",
 		"genericError": "Une erreur s'est produite lors de l'inscription. Veuillez réessayer.",
-		"emailPasswordRequired": "L'email et le mot de passe sont requis",
-		"invalidCredentials": "Email ou mot de passe invalide",
-		"verifyEmailBeforeLogin": "Veuillez vérifier votre email avant de vous connecter"
+		"emailPasswordRequired": "E-mail et mot de passe requis",
+		"invalidCredentials": "E-mail ou mot de passe invalide",
+		"verifyEmailBeforeLogin": "Veuillez vérifier votre e-mail avant de vous connecter",
+		"failedForgotPassword": "Échec de l'envoi du lien de réinitialisation du mot de passe",
+		"errorProcessingForgotPasswordRequest": "Erreur lors du traitement de la demande de réinitialisation du mot de passe. Veuillez réessayer plus tard.",
+		"userNotFound": "Utilisateur non trouvé avec l'e-mail fourni",
+		"passwordsMustMatch": "Les mots de passe doivent correspondre",
+		"failedResetPassword": "Échec de la réinitialisation du mot de passe",
+		"invalidTokenOrResetTokenExpired": "Token invalide ou token de réinitialisation expiré",
+		"Token and new password are required": "Token et nouveau mot de passe requis",
+		"Invalid or expired password reset token": "Token de réinitialisation de mot de passe invalide ou expiré"
 	}
 }

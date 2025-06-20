@@ -1,8 +1,8 @@
 {
 	"general": {
-		"email": "Email",
+		"email": "E-mail",
 		"password": "Senha",
-		"emailPlaceholder": "Digite seu endereço de email",
+		"emailPlaceholder": "Digite seu endereço de e-mail",
 		"passwordPlaceholder": "Digite sua senha",
 		"forgotPassword": "Esqueceu sua senha?",
 		"submit": "Enviar",
@@ -16,43 +16,66 @@
 		"username": "Nome de usuário",
 		"usernamePlaceholder": "Digite seu nome de usuário",
 		"alreadyHaveAccount": "Já tem uma conta?",
+		"loading": "Carregando...",
 		"userVerifiedSuccess": "Usuário verificado com sucesso"
 	},
 	"login": {
-		"title": "Faça login na sua conta",
-		"description": "Digite seu email abaixo para fazer login",
+		"title": "Entrar na sua conta",
+		"description": "Digite seu e-mail abaixo para entrar na sua conta",
 		"submit": "Entrar",
 		"loginSuccess": "Login bem-sucedido! Redirecionando..."
 	},
 	"signup": {
-		"title": "Crie sua conta",
+		"title": "Criar sua conta",
 		"description": "Cadastre-se para começar com o Chatify",
-		"submit": "Cadastrar",
-		"successMessage": "Conta criada com sucesso! Por favor, verifique seu email para ativar sua conta."
+		"submit": "Cadastrar-se",
+		"successMessage": "Conta criada com sucesso! Verifique seu e-mail para ativar sua conta."
 	},
 	"forgot": {
-		"title": "Redefina sua senha",
-		"description": "Digite seu email para receber instruções de redefinição",
-		"submit": "Enviar email de redefinição"
+		"title": "Redefinir sua senha",
+		"description": "Digite seu e-mail para receber um e-mail de redefinição de senha",
+		"submit": "Enviar e-mail de redefinição",
+		"successMessage": "Link de redefinição de senha enviado para o seu e-mail.",
+		"emailRequired": "E-mail é obrigatório",
+		"emailNotFound": "E-mail não encontrado em nossos registros",
+		"accountExistPasswordResetLinkSent": "Existe uma conta com este e-mail. Um link de redefinição de senha foi enviado para o seu e-mail."
 	},
 	"updatePassword": {
-		"title": "Atualize sua senha",
+		"title": "Atualizar sua senha",
 		"description": "Digite sua nova senha abaixo",
 		"newPassword": "Nova senha",
 		"newPasswordPlaceholder": "Digite sua nova senha",
-		"confirmPassword": "Confirme a senha",
+		"confirmPassword": "Confirmar senha",
 		"confirmPasswordPlaceholder": "Confirme sua nova senha",
-		"submit": "Atualizar senha"
+		"submit": "Atualizar senha",
+		"success": "Senha redefinida com sucesso",
+		"tokenAndNewPasswordRequired": "Token e nova senha são obrigatórios",
+		"passwordSuccessfullyReset": "A senha foi redefinida com sucesso"
+	},
+	"verifyUser": {
+		"verificationTokenRequired": "Token de verificação obrigatório",
+		"inValidVerificationToken": "Token de verificação inválido",
+		"userAlreadyVerified": "Usuário já verificado",
+		"failedToVerifyUser": "Falha ao verificar o usuário. Tente novamente.",
+		"emailVerifiedSuccessfully": "E-mail verificado com sucesso"
 	},
 	"error": {
 		"invalidEmail": "Endereço de e-mail inválido",
 		"passwordLength": "A senha deve ter pelo menos 8 caracteres",
 		"invalidToken": "Token inválido ou expirado",
-		"failedVerification": "Falha ao verificar o usuário",
-		"conflictUser": "Usuário com e-mail {{email}} já existe",
-		"genericError": "Ocorreu um erro durante o registro. Por favor, tente novamente.",
+		"failedVerification": "Falha na verificação do usuário",
+		"conflictUser": "Usuário com o e-mail {{email}} já existe",
+		"genericError": "Ocorreu um erro durante o registro. Tente novamente.",
 		"emailPasswordRequired": "E-mail e senha são obrigatórios",
 		"invalidCredentials": "E-mail ou senha inválidos",
-		"verifyEmailBeforeLogin": "Por favor, verifique seu e-mail antes de fazer login"
+		"verifyEmailBeforeLogin": "Verifique seu e-mail antes de fazer login",
+		"failedForgotPassword": "Falha ao enviar o link de redefinição de senha",
+		"errorProcessingForgotPasswordRequest": "Erro ao processar a solicitação de redefinição de senha. Tente novamente mais tarde.",
+		"userNotFound": "Usuário não encontrado com o e-mail fornecido",
+		"passwordsMustMatch": "As senhas devem corresponder",
+		"failedResetPassword": "Falha ao redefinir a senha",
+		"invalidTokenOrResetTokenExpired": "Token inválido ou token de redefinição expirado",
+		"Token and new password are required": "Token e nova senha são obrigatórios",
+		"Invalid or expired password reset token": "Token de redefinição de senha inválido ou expirado"
 	}
 }

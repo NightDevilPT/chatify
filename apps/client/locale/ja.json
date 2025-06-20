@@ -1,58 +1,81 @@
 {
 	"general": {
-		"email": "メールアドレス",
+		"email": "メール",
 		"password": "パスワード",
 		"emailPlaceholder": "メールアドレスを入力してください",
 		"passwordPlaceholder": "パスワードを入力してください",
-		"forgotPassword": "パスワードをお忘れですか？",
+		"forgotPassword": "パスワードを忘れましたか？",
 		"submit": "送信",
 		"googleLogin": "Googleでログイン",
-		"noAccount": "アカウントをお持ちでないですか？",
-		"signUp": "サインアップ",
+		"noAccount": "アカウントがありませんか？",
+		"signUp": "登録",
 		"login": "ログイン",
-		"continueWithGoogle": "Googleで続行",
-		"dontHaveAccount": "アカウントをお持ちでないですか？",
+		"continueWithGoogle": "Googleで続ける",
+		"dontHaveAccount": "アカウントがありませんか？",
 		"beBolBeSocial": "大胆に、社交的に。",
 		"username": "ユーザー名",
 		"usernamePlaceholder": "ユーザー名を入力してください",
 		"alreadyHaveAccount": "すでにアカウントをお持ちですか？",
-		"userVerifiedSuccess": "ユーザーの確認に成功しました"
+		"loading": "読み込み中...",
+		"userVerifiedSuccess": "ユーザー認証に成功しました"
 	},
 	"login": {
 		"title": "アカウントにログイン",
-		"description": "下にメールアドレスを入力してログインしてください",
+		"description": "以下にメールアドレスを入力してアカウントにログインしてください",
 		"submit": "ログイン",
-		"loginSuccess": "ログインに成功しました！リダイレクト中..."
+		"loginSuccess": "ログイン成功！リダイレクト中..."
 	},
 	"signup": {
 		"title": "アカウントを作成",
-		"description": "Chatifyを始めるためにサインアップしてください",
-		"submit": "サインアップ",
-		"successMessage": "アカウントが正常に作成されました！アカウントを確認するためにメールをチェックしてください。"
+		"description": "Chatifyを始めるために登録してください",
+		"submit": "登録",
+		"successMessage": "アカウントが正常に作成されました！アカウントを認証するためにメールを確認してください。"
 	},
 	"forgot": {
 		"title": "パスワードをリセット",
-		"description": "パスワードリセットの指示を受け取るためにメールアドレスを入力してください",
-		"submit": "リセットメールを送信"
+		"description": "パスワードリセットメールを受信するために以下にメールアドレスを入力してください",
+		"submit": "リセットメールを送信",
+		"successMessage": "パスワードリセットリンクがあなたのメールに送信されました。",
+		"emailRequired": "メールアドレスが必要です",
+		"emailNotFound": "記録にメールアドレスが見つかりません",
+		"accountExistPasswordResetLinkSent": "このメールアドレスでアカウントが存在します。パスワードリセットリンクがあなたのメールに送信されました。"
 	},
 	"updatePassword": {
-		"title": "パスワードを更新する",
-		"description": "新しいパスワードを以下に入力してください",
+		"title": "パスワードを更新",
+		"description": "以下に新しいパスワードを入力してください",
 		"newPassword": "新しいパスワード",
 		"newPasswordPlaceholder": "新しいパスワードを入力してください",
 		"confirmPassword": "パスワードの確認",
-		"confirmPasswordPlaceholder": "新しいパスワードを確認してください",
-		"submit": "パスワードを更新する"
+		"confirmPasswordPlaceholder": "新しいパスワードを再入力してください",
+		"submit": "パスワードを更新",
+		"success": "パスワードが正常にリセットされました",
+		"tokenAndNewPasswordRequired": "トークンと新しいパスワードが必要です",
+		"passwordSuccessfullyReset": "パスワードが正常にリセットされました"
+	},
+	"verifyUser": {
+		"verificationTokenRequired": "認証トークンが必要です",
+		"inValidVerificationToken": "無効な認証トークン",
+		"userAlreadyVerified": "ユーザーはすでに認証済みです",
+		"failedToVerifyUser": "ユーザーの認証に失敗しました。もう一度お試しください。",
+		"emailVerifiedSuccessfully": "メールが正常に認証されました"
 	},
 	"error": {
 		"invalidEmail": "無効なメールアドレス",
-		"passwordLength": "パスワードは8文字以上で入力してください",
+		"passwordLength": "パスワードは8文字以上である必要があります",
 		"invalidToken": "無効または期限切れのトークン",
-		"failedVerification": "ユーザーの確認に失敗しました",
-		"conflictUser": "メールアドレス {{email}} のユーザーは既に存在します",
+		"failedVerification": "ユーザー認証に失敗しました",
+		"conflictUser": "メール {{email}} のユーザーはすでに存在します",
 		"genericError": "登録中にエラーが発生しました。もう一度お試しください。",
-		"emailPasswordRequired": "メールアドレスとパスワードが必要です",
-		"invalidCredentials": "メールアドレスまたはパスワードが無効です",
-		"verifyEmailBeforeLogin": "ログイン前にメールアドレスを確認してください"
+		"emailPasswordRequired": "メールとパスワードが必要です",
+		"invalidCredentials": "無効なメールまたはパスワード",
+		"verifyEmailBeforeLogin": "ログインする前にメールを認証してください",
+		"failedForgotPassword": "パスワードリセットリンクの送信に失敗しました",
+		"errorProcessingForgotPasswordRequest": "パスワードリセットリクエストの処理中にエラーが発生しました。後でもう一度お試しください。",
+		"userNotFound": "提供されたメールでユーザーが見つかりません",
+		"passwordsMustMatch": "パスワードが一致する必要があります",
+		"failedResetPassword": "パスワードのリセットに失敗しました",
+		"invalidTokenOrResetTokenExpired": "無効なトークンまたはリセットトークンが期限切れです",
+		"Token and new password are required": "トークンと新しいパスワードが必要です",
+		"Invalid or expired password reset token": "無効または期限切れのパスワードリセットトークン"
 	}
 }

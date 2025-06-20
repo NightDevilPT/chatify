@@ -5,54 +5,77 @@
 		"emailPlaceholder": "अपना ईमेल पता दर्ज करें",
 		"passwordPlaceholder": "अपना पासवर्ड दर्ज करें",
 		"forgotPassword": "पासवर्ड भूल गए?",
-		"submit": "सबमिट करें",
-		"googleLogin": "Google से लॉगिन करें",
+		"submit": "जमा करें",
+		"googleLogin": "Google के साथ लॉगिन करें",
 		"noAccount": "खाता नहीं है?",
 		"signUp": "साइन अप करें",
-		"login": "लॉगिन",
+		"login": "लॉगिन करें",
 		"continueWithGoogle": "Google के साथ जारी रखें",
 		"dontHaveAccount": "खाता नहीं है?",
-		"beBolBeSocial": "साहसी बनो, सामाजिक बनो।",
+		"beBolBeSocial": "नन्हा बनें, सामाजिक बनें।",
 		"username": "उपयोगकर्ता नाम",
 		"usernamePlaceholder": "अपना उपयोगकर्ता नाम दर्ज करें",
 		"alreadyHaveAccount": "पहले से खाता है?",
-		"userVerifiedSuccess": "उपयोगकर्ता सफलतापूर्वक सत्यापित हुआ"
+		"loading": "लोड हो रहा है...",
+		"userVerifiedSuccess": "उपयोगकर्ता सफलतापूर्वक सत्यापित"
 	},
 	"login": {
 		"title": "अपने खाते में लॉगिन करें",
-		"description": "अपने ईमेल को दर्ज करें और लॉगिन करें",
+		"description": "अपने खाते में लॉगिन करने के लिए नीचे अपना ईमेल दर्ज करें",
 		"submit": "लॉगिन करें",
-		"loginSuccess": "लॉगिन सफल! रीडायरेक्ट हो रहा है..."
+		"loginSuccess": "लॉगिन सफल! पुनर्निर्देशन..."
 	},
 	"signup": {
 		"title": "अपना खाता बनाएं",
 		"description": "Chatify के साथ शुरू करने के लिए साइन अप करें",
 		"submit": "साइन अप करें",
-		"successMessage": "खाता सफलतापूर्वक बनाया गया! कृपया अपने खाते को सत्यापित करने के लिए अपने ईमेल की जांच करें।"
+		"successMessage": "खाता सफलतापूर्वक बनाया गया! कृपया अपने खाते को सत्यापित करने के लिए अपना ईमेल जांचें।"
 	},
 	"forgot": {
 		"title": "अपना पासवर्ड रीसेट करें",
-		"description": "पासवर्ड रीसेट निर्देश प्राप्त करने के लिए अपना ईमेल दर्ज करें",
-		"submit": "रीसेट ईमेल भेजें"
+		"description": "पासवर्ड रीसेट मेल प्राप्त करने के लिए नीचे अपना ईमेल दर्ज करें",
+		"submit": "रीसेट ईमेल भेजें",
+		"successMessage": "पासवर्ड रीसेट लिंक आपके ईमेल पर भेजा गया।",
+		"emailRequired": "ईमेल आवश्यक है",
+		"emailNotFound": "हमारे रिकॉर्ड में ईमेल नहीं मिला",
+		"accountExistPasswordResetLinkSent": "इस ईमेल के साथ एक खाता मौजूद है। पासवर्ड रीसेट लिंक आपके ईमेल पर भेजा गया है।"
 	},
 	"updatePassword": {
 		"title": "अपना पासवर्ड अपडेट करें",
 		"description": "नीचे अपना नया पासवर्ड दर्ज करें",
 		"newPassword": "नया पासवर्ड",
 		"newPasswordPlaceholder": "अपना नया पासवर्ड दर्ज करें",
-		"confirmPassword": "पासवर्ड पुष्टि करें",
-		"confirmPasswordPlaceholder": "अपना नया पासवर्ड पुष्टि करें",
-		"submit": "पासवर्ड अपडेट करें"
+		"confirmPassword": "पासवर्ड की पुष्टि करें",
+		"confirmPasswordPlaceholder": "अपना नया पासवर्ड पुनः दर्ज करें",
+		"submit": "पासवर्ड अपडेट करें",
+		"success": "पासवर्ड सफलतापूर्वक रीसेट किया गया",
+		"tokenAndNewPasswordRequired": "टोकन और नया पासवर्ड आवश्यक है",
+		"passwordSuccessfullyReset": "पासवर्ड सफलतापूर्वक रीसेट किया गया"
+	},
+	"verifyUser": {
+		"verificationTokenRequired": "सत्यापन टोकन आवश्यक है",
+		"inValidVerificationToken": "अमान्य सत्यापन टोकन",
+		"userAlreadyVerified": "उपयोगकर्ता पहले से सत्यापित है",
+		"failedToVerifyUser": "उपयोगकर्ता सत्यापन विफल। कृपया पुनः प्रयास करें।",
+		"emailVerifiedSuccessfully": "ईमेल सफलतापूर्वक सत्यापित"
 	},
 	"error": {
 		"invalidEmail": "अमान्य ईमेल पता",
 		"passwordLength": "पासवर्ड कम से कम 8 अक्षरों का होना चाहिए",
-		"invalidToken": "अमान्य या समाप्त टोकन",
-		"failedVerification": "उपयोगकर्ता सत्यापित करने में विफल",
-		"conflictUser": "ईमेल {{email}} वाला उपयोगकर्ता पहले से मौजूद है",
+		"invalidToken": "अमान्य या समाप्त हो चुका टोकन",
+		"failedVerification": "उपयोगकर्ता सत्यापन विफल",
+		"conflictUser": "{{email}} ईमेल के साथ उपयोगकर्ता पहले से मौजूद है",
 		"genericError": "पंजीकरण के दौरान एक त्रुटि हुई। कृपया पुनः प्रयास करें।",
 		"emailPasswordRequired": "ईमेल और पासवर्ड आवश्यक हैं",
 		"invalidCredentials": "अमान्य ईमेल या पासवर्ड",
-		"verifyEmailBeforeLogin": "लॉगिन करने से पहले कृपया अपना ईमेल सत्यापित करें"
+		"verifyEmailBeforeLogin": "लॉगिन करने से पहले कृपया अपना ईमेल सत्यापित करें",
+		"failedForgotPassword": "पासवर्ड रीसेट लिंक भेजने में विफल",
+		"errorProcessingForgotPasswordRequest": "पासवर्ड रीसेट अनुरोध संसाधित करने में त्रुटि। कृपया बाद में पुनः प्रयास करें।",
+		"userNotFound": "प्रदान किए गए ईमेल के साथ उपयोगकर्ता नहीं मिला",
+		"passwordsMustMatch": "पासवर्ड समान होने चाहिए",
+		"failedResetPassword": "पासवर्ड रीसेट करने में विफल",
+		"invalidTokenOrResetTokenExpired": "अमान्य टोकन या रीसेट टोकन समाप्त हो चुका है",
+		"Token and new password are required": "टोकन और नया पासवर्ड आवश्यक है",
+		"Invalid or expired password reset token": "अमान्य या समाप्त हो चुका पासवर्ड रीसेट टोकन"
 	}
 }

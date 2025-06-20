@@ -16,13 +16,14 @@
 		"username": "Nome utente",
 		"usernamePlaceholder": "Inserisci il tuo nome utente",
 		"alreadyHaveAccount": "Hai già un account?",
+		"loading": "Caricamento...",
 		"userVerifiedSuccess": "Utente verificato con successo"
 	},
 	"login": {
 		"title": "Accedi al tuo account",
-		"description": "Inserisci la tua email per accedere",
+		"description": "Inserisci la tua email qui sotto per accedere al tuo account",
 		"submit": "Accedi",
-		"loginSuccess": "Accesso riuscito! Reindirizzamento in corso..."
+		"loginSuccess": "Accesso riuscito! Reindirizzamento..."
 	},
 	"signup": {
 		"title": "Crea il tuo account",
@@ -32,8 +33,12 @@
 	},
 	"forgot": {
 		"title": "Reimposta la tua password",
-		"description": "Inserisci la tua email per ricevere le istruzioni di reimpostazione",
-		"submit": "Invia email di reset"
+		"description": "Inserisci la tua email per ricevere un'email di reimpostazione della password",
+		"submit": "Invia email di reimpostazione",
+		"successMessage": "Link di reimpostazione della password inviato alla tua email.",
+		"emailRequired": "L'email è obbligatoria",
+		"emailNotFound": "Email non trovata nei nostri registri",
+		"accountExistPasswordResetLinkSent": "Esiste un account con questa email. Un link di reimpostazione della password è stato inviato alla tua email."
 	},
 	"updatePassword": {
 		"title": "Aggiorna la tua password",
@@ -42,17 +47,35 @@
 		"newPasswordPlaceholder": "Inserisci la tua nuova password",
 		"confirmPassword": "Conferma password",
 		"confirmPasswordPlaceholder": "Conferma la tua nuova password",
-		"submit": "Aggiorna password"
+		"submit": "Aggiorna password",
+		"success": "Password reimpostata con successo",
+		"tokenAndNewPasswordRequired": "Token e nuova password richiesti",
+		"passwordSuccessfullyReset": "La password è stata reimpostata con successo"
+	},
+	"verifyUser": {
+		"verificationTokenRequired": "Token di verifica richiesto",
+		"inValidVerificationToken": "Token di verifica non valido",
+		"userAlreadyVerified": "L'utente è già verificato",
+		"failedToVerifyUser": "Impossibile verificare l'utente. Riprova.",
+		"emailVerifiedSuccessfully": "Email verificata con successo"
 	},
 	"error": {
 		"invalidEmail": "Indirizzo email non valido",
-		"passwordLength": "La password deve contenere almeno 8 caratteri",
+		"passwordLength": "La password deve essere di almeno 8 caratteri",
 		"invalidToken": "Token non valido o scaduto",
-		"failedVerification": "Verifica utente fallita",
-		"conflictUser": "Utente con email {{email}} già esistente",
+		"failedVerification": "Verifica dell'utente fallita",
+		"conflictUser": "L'utente con l'email {{email}} esiste già",
 		"genericError": "Si è verificato un errore durante la registrazione. Riprova.",
-		"emailPasswordRequired": "Email e password sono obbligatorie",
+		"emailPasswordRequired": "Email e password richiesti",
 		"invalidCredentials": "Email o password non validi",
-		"verifyEmailBeforeLogin": "Verifica la tua email prima di accedere"
+		"verifyEmailBeforeLogin": "Verifica la tua email prima di accedere",
+		"failedForgotPassword": "Impossibile inviare il link di reimpostazione della password",
+		"errorProcessingForgotPasswordRequest": "Errore durante l'elaborazione della richiesta di reimpostazione della password. Riprova più tardi.",
+		"userNotFound": "Utente non trovato con l'email fornita",
+		"passwordsMustMatch": "Le password devono corrispondere",
+		"failedResetPassword": "Impossibile reimpostare la password",
+		"invalidTokenOrResetTokenExpired": "Token non valido o token di reimpostazione scaduto",
+		"Token and new password are required": "Token e nuova password richiesti",
+		"Invalid or expired password reset token": "Token di reimpostazione della password non valido o scaduto"
 	}
 }

@@ -6,21 +6,22 @@
 		"passwordPlaceholder": "Nhập mật khẩu của bạn",
 		"forgotPassword": "Quên mật khẩu?",
 		"submit": "Gửi",
-		"googleLogin": "Đăng nhập với Google",
+		"googleLogin": "Đăng nhập bằng Google",
 		"noAccount": "Chưa có tài khoản?",
 		"signUp": "Đăng ký",
 		"login": "Đăng nhập",
 		"continueWithGoogle": "Tiếp tục với Google",
 		"dontHaveAccount": "Chưa có tài khoản?",
-		"beBolBeSocial": "Hãy mạnh dạn, hãy xã hội.",
-		"username": "Tên đăng nhập",
-		"usernamePlaceholder": "Nhập tên đăng nhập của bạn",
+		"beBolBeSocial": "Hãy táo bạo, hãy kết nối.",
+		"username": "Tên người dùng",
+		"usernamePlaceholder": "Nhập tên người dùng của bạn",
 		"alreadyHaveAccount": "Đã có tài khoản?",
-		"userVerifiedSuccess": "Xác minh người dùng thành công"
+		"loading": "Đang tải...",
+		"userVerifiedSuccess": "Người dùng được xác minh thành công"
 	},
 	"login": {
 		"title": "Đăng nhập vào tài khoản của bạn",
-		"description": "Nhập email của bạn bên dưới để đăng nhập",
+		"description": "Nhập email của bạn dưới đây để đăng nhập vào tài khoản",
 		"submit": "Đăng nhập",
 		"loginSuccess": "Đăng nhập thành công! Đang chuyển hướng..."
 	},
@@ -28,31 +29,53 @@
 		"title": "Tạo tài khoản của bạn",
 		"description": "Đăng ký để bắt đầu với Chatify",
 		"submit": "Đăng ký",
-		"successMessage": "Tài khoản đã được tạo thành công! Vui lòng kiểm tra email của bạn để xác minh tài khoản."
+		"successMessage": "Tài khoản được tạo thành công! Vui lòng kiểm tra email để xác minh tài khoản của bạn."
 	},
 	"forgot": {
 		"title": "Đặt lại mật khẩu của bạn",
-		"description": "Nhập email của bạn để nhận hướng dẫn đặt lại",
-		"submit": "Gửi email đặt lại"
+		"description": "Nhập email của bạn để nhận email đặt lại mật khẩu",
+		"submit": "Gửi email đặt lại",
+		"successMessage": "Liên kết đặt lại mật khẩu đã được gửi đến email của bạn.",
+		"emailRequired": "Yêu cầu email",
+		"emailNotFound": "Email không tìm thấy trong hồ sơ của chúng tôi",
+		"accountExistPasswordResetLinkSent": "Tài khoản với email này đã tồn tại. Liên kết đặt lại mật khẩu đã được gửi đến email của bạn."
 	},
 	"updatePassword": {
-		"title": "Cập nhật mật khẩu",
-		"description": "Nhập mật khẩu mới của bạn bên dưới",
+		"title": "Cập nhật mật khẩu của bạn",
+		"description": "Nhập mật khẩu mới của bạn dưới đây",
 		"newPassword": "Mật khẩu mới",
 		"newPasswordPlaceholder": "Nhập mật khẩu mới của bạn",
 		"confirmPassword": "Xác nhận mật khẩu",
 		"confirmPasswordPlaceholder": "Xác nhận mật khẩu mới của bạn",
-		"submit": "Cập nhật mật khẩu"
+		"submit": "Cập nhật mật khẩu",
+		"success": "Mật khẩu được đặt lại thành công",
+		"tokenAndNewPasswordRequired": "Yêu cầu token và mật khẩu mới",
+		"passwordSuccessfullyReset": "Mật khẩu đã được đặt lại thành công"
+	},
+	"verifyUser": {
+		"verificationTokenRequired": "Yêu cầu token xác minh",
+		"inValidVerificationToken": "Token xác minh không hợp lệ",
+		"userAlreadyVerified": "Người dùng đã được xác minh",
+		"failedToVerifyUser": "Xác minh người dùng thất bại. Vui lòng thử lại.",
+		"emailVerifiedSuccessfully": "Email được xác minh thành công"
 	},
 	"error": {
 		"invalidEmail": "Địa chỉ email không hợp lệ",
 		"passwordLength": "Mật khẩu phải có ít nhất 8 ký tự",
 		"invalidToken": "Token không hợp lệ hoặc đã hết hạn",
-		"failedVerification": "Xác thực người dùng thất bại",
+		"failedVerification": "Xác minh người dùng thất bại",
 		"conflictUser": "Người dùng với email {{email}} đã tồn tại",
 		"genericError": "Đã xảy ra lỗi trong quá trình đăng ký. Vui lòng thử lại.",
-		"emailPasswordRequired": "Email và mật khẩu là bắt buộc",
+		"emailPasswordRequired": "Yêu cầu email và mật khẩu",
 		"invalidCredentials": "Email hoặc mật khẩu không hợp lệ",
-		"verifyEmailBeforeLogin": "Vui lòng xác thực email trước khi đăng nhập"
+		"verifyEmailBeforeLogin": "Vui lòng xác minh email của bạn trước khi đăng nhập",
+		"failedForgotPassword": "Không thể gửi liên kết đặt lại mật khẩu",
+		"errorProcessingForgotPasswordRequest": "Lỗi khi xử lý yêu cầu đặt lại mật khẩu. Vui lòng thử lại sau.",
+		"userNotFound": "Không tìm thấy người dùng với email cung cấp",
+		"passwordsMustMatch": "Mật khẩu phải khớp",
+		"failedResetPassword": "Không thể đặt lại mật khẩu",
+		"invalidTokenOrResetTokenExpired": "Token không hợp lệ hoặc token đặt lại đã hết hạn",
+		"Token and new password are required": "Yêu cầu token và mật khẩu mới",
+		"Invalid or expired password reset token": "Token đặt lại mật khẩu không hợp lệ hoặc đã hết hạn"
 	}
 }
