@@ -13,6 +13,7 @@ import { LoggerService } from 'src/services/logger-service/index.service';
 import { HttpErrorService } from 'src/services/http-error-service/index.service';
 import { JwtTokenService } from 'src/services/jwt-token-service/index.service';
 import { Settings, SettingsSchema } from '../settings/entities/setting.entity';
+import { SettingsRepository } from '../settings/repository/setting.repository';
 
 @Module({
   imports: [
@@ -31,6 +32,7 @@ import { Settings, SettingsSchema } from '../settings/entities/setting.entity';
     LoggerService,
     HashService,
     JwtTokenService,
+    SettingsRepository,
     HttpErrorService,
     ...UserCommandHandlers,
   ],

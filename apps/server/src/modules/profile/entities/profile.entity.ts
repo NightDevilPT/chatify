@@ -12,8 +12,12 @@ import { User } from 'src/modules/users/entities/user.entity';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Settings } from 'src/modules/settings/entities/setting.entity';
 
-
-export type SocialPlatform = 'twitter' | 'linkedin' | 'github' | 'facebook' | 'instagram';
+export type SocialPlatform =
+  | 'twitter'
+  | 'linkedin'
+  | 'github'
+  | 'facebook'
+  | 'instagram';
 
 export type ProfileDocument = HydratedDocument<Profile>;
 
@@ -97,10 +101,6 @@ export class Profile {
   @Prop({ type: Object })
   @IsOptional()
   socialLinks?: Record<SocialPlatform, string>;
-
-  @ApiProperty({ type: String, description: 'Reference to Settings' })
-  @Prop({ type: Types.ObjectId, ref: 'Setting', required: false })
-  settingId?: Types.ObjectId | Settings;
 }
 
 export const ProfileSchema = SchemaFactory.createForClass(Profile);

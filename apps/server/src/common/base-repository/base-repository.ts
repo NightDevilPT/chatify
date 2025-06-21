@@ -2,36 +2,40 @@
 import { Injectable } from '@nestjs/common';
 import { Model, Document, FilterQuery, UpdateQuery } from 'mongoose';
 
+// Define a clean return type that includes id
+export type CleanDocument<T> = Omit<T, keyof Document> & {
+  id: string;
+};
+
 @Injectable()
 export abstract class BaseRepository<T extends Document> {
   protected constructor(protected readonly model: Model<T>) {}
 
-  private toObject(document: T): Omit<T, keyof Document> {
-    if (!document) return document;
-    return document.toObject({
+  protected toObject(document: T): CleanDocument<T> {
+    if (!document) return document as any;
+    const obj = document.toObject({
       versionKey: false,
       transform: (doc, ret) => {
-        ret.id = ret._id;
+        ret.id = ret._id.toString();
         delete ret._id;
         delete ret.__v;
         return ret;
       },
     });
+    return obj as CleanDocument<T>;
   }
 
-  async create(createDto: Partial<T>): Promise<Omit<T, keyof Document>> {
+  async create(createDto: Partial<T>): Promise<CleanDocument<T>> {
     const document = await this.model.create(createDto);
     return this.toObject(document);
   }
 
-  async findById(id: string): Promise<Omit<T, keyof Document> | null> {
+  async findById(id: string): Promise<CleanDocument<T> | null> {
     const document = await this.model.findById(id);
     return document ? this.toObject(document) : null;
   }
 
-  async findOne(
-    filter: FilterQuery<T>,
-  ): Promise<Omit<T, keyof Document> | null> {
+  async findOne(filter: FilterQuery<T>): Promise<CleanDocument<T> | null> {
     const document = await this.model.findOne(filter);
     return document ? this.toObject(document) : null;
   }
@@ -47,7 +51,7 @@ export abstract class BaseRepository<T extends Document> {
       limit?: number;
       sort?: Record<string, 1 | -1>;
     },
-  ): Promise<Omit<T, keyof Document>[]> {
+  ): Promise<CleanDocument<T>[]> {
     let query = this.model.find(filter);
     if (options?.skip) query = query.skip(options.skip);
     if (options?.limit) query = query.limit(options.limit);
@@ -59,7 +63,7 @@ export abstract class BaseRepository<T extends Document> {
   async update(
     id: string,
     updateDto: UpdateQuery<T>,
-  ): Promise<Omit<T, keyof Document> | null> {
+  ): Promise<CleanDocument<T> | null> {
     const document = await this.model.findByIdAndUpdate(id, updateDto, {
       new: true,
     });

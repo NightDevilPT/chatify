@@ -6,6 +6,7 @@ import { LoggerService } from 'src/services/logger-service/index.service';
 import { HttpErrorService } from 'src/services/http-error-service/index.service';
 import { VerifyUserCommand } from '../impl/verify-user.command';
 import { UserRepository } from '../../repository/user.repository';
+import { Types } from 'mongoose';
 
 @Injectable()
 @CommandHandler(VerifyUserCommand)
@@ -59,6 +60,10 @@ export class VerifyUserHandler implements ICommandHandler<VerifyUserCommand> {
           'failedToVerifyUser',
         );
       }
+
+      const defaultSettings = await this.userRepository.createDefaultSettings(
+        new Types.ObjectId(verifiedUser.id),
+      );
 
       this.logger.debug(`User verified successfully: ${verifiedUser.email}`);
       return {
