@@ -23,6 +23,7 @@ import ChatifyLogo from "@/components/shared/atoms/logo";
 import { PasswordInput } from "@/components/ui/password-input";
 import { useLogin } from "@/hooks/login/useLogin";
 import { useRouter } from "next/navigation";
+import Loading from "@/components/shared/atoms/loading";
 
 // Define form validation schema
 const formSchema = z.object({
@@ -47,7 +48,7 @@ export function LoginForm({
 	});
 
 	// Using the login hook
-	const { mutate: loginUser } = useLogin({
+	const { mutate: loginUser, isPending } = useLogin({
 		onSuccess: (response) => {
 			if (response.status === "success") {
 				toast.success(
@@ -133,8 +134,16 @@ export function LoginForm({
 								<Button
 									type="submit"
 									className="w-full bg-primary text-foreground"
+									disabled={isPending}
 								>
-									{t("general.login")}
+									{isPending ? (
+										<Loading
+											size="small"
+											dotBackgroundColor="bg-foreground"
+										/>
+									) : (
+										t("general.login")
+									)}
 								</Button>
 								{/* <Button
 									variant="secondary"

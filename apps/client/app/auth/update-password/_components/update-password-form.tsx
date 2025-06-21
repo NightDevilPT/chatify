@@ -22,6 +22,7 @@ import { Separator } from "@/components/ui/separator";
 import ChatifyLogo from "@/components/shared/atoms/logo";
 import { PasswordInput } from "@/components/ui/password-input";
 import { useResetPassword } from "@/hooks/update-password/useUpdatePassword";
+import Loading from "@/components/shared/atoms/loading";
 
 // Schema: newPassword must be min 8 chars and confirmPassword must match newPassword
 const formSchema = z
@@ -51,7 +52,7 @@ export function UpdatePasswordForm({
 		resolver: zodResolver(formSchema),
 	});
 
-	const { mutate: resetPassword } = useResetPassword({
+	const { mutate: resetPassword, isPending } = useResetPassword({
 		onSuccess: (response) => {
 			if (response.status === "success") {
 				toast.success(t(`updatePassword.${response.message}`));
@@ -136,9 +137,16 @@ export function UpdatePasswordForm({
 						<Button
 							type="submit"
 							className="w-full bg-primary text-foreground"
-							disabled={isSubmitting}
+							disabled={isPending}
 						>
-							{t("updatePassword.submit")}
+							{isPending ? (
+								<Loading
+									size="small"
+									dotBackgroundColor="bg-foreground"
+								/>
+							) : (
+								t("updatePassword.submit")
+							)}
 						</Button>
 
 						<div className="mt-4 text-center text-sm">

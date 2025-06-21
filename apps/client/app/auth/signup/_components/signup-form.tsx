@@ -23,6 +23,7 @@ import ChatifyLogo from "@/components/shared/atoms/logo";
 import { PasswordInput } from "@/components/ui/password-input";
 import { useRegister } from "@/hooks/signup/useRegister";
 import { useRouter } from "next/navigation";
+import Loading from "@/components/shared/atoms/loading";
 
 // Match backend DTO validation with Zod
 const formSchema = z.object({
@@ -54,7 +55,7 @@ export function SignupForm({
 	} = useForm<FormData>({
 		resolver: zodResolver(formSchema),
 	});
-	const { mutate: registerService } = useRegister({
+	const { mutate: registerService, isPending  } = useRegister({
 		onSuccess: (response) => {
 			if (response.status === "success") {
 				toast.success(t("signup.successMessage"));
@@ -62,7 +63,7 @@ export function SignupForm({
 			}
 		},
 		onError: (error) => {
-			console.log(error.message)
+			console.log(error.message);
 			toast.error(t(`error.${error.message}`, { email: watch("email") }));
 		},
 	});
@@ -147,8 +148,16 @@ export function SignupForm({
 								<Button
 									type="submit"
 									className="w-full bg-primary text-foreground"
+									disabled={isPending}
 								>
-									{t("general.signUp", "Sign Up")}
+									{isPending ? (
+										<Loading
+											size="small"
+											dotBackgroundColor="bg-foreground"
+										/>
+									) : (
+										t("general.signUp", "Sign Up")
+									)}
 								</Button>
 								{/* <Button
 									variant="secondary"

@@ -22,6 +22,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import ChatifyLogo from "@/components/shared/atoms/logo";
 import { useForgotPassword } from "@/hooks/forget-password/useForgetPassword";
+import Loading from "@/components/shared/atoms/loading";
 
 const formSchema = z.object({
 	email: z.string().email("error.invalidEmail"),
@@ -44,7 +45,7 @@ export function ForgetPasswordForm({
 		resolver: zodResolver(formSchema),
 	});
 
-	const { mutate: forgotPassword } = useForgotPassword({
+	const { mutate: forgotPassword, isPending } = useForgotPassword({
 		onSuccess: (response) => {
 			if (response.status === "success") {
 				toast.success(t("forgot.successMessage"));
@@ -100,7 +101,14 @@ export function ForgetPasswordForm({
 							className="w-full bg-primary text-foreground"
 							disabled={isSubmitting}
 						>
-							{t("general.submit")}
+							{isPending ? (
+								<Loading
+									size="small"
+									dotBackgroundColor="bg-foreground"
+								/>
+							) : (
+								t("general.submit")
+							)}
 						</Button>
 						<div className="mt-4 text-center text-sm">
 							{t("general.alreadyHaveAccount")}{" "}
