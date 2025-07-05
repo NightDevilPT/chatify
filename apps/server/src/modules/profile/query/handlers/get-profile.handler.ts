@@ -18,7 +18,6 @@ export class GetProfileHandler implements IQueryHandler<GetProfileQuery> {
 
   async execute(command: GetProfileQuery) {
     const { userId } = command;
-	console.log(userId,'FFFFFFF');
 
     this.logger.debug(`Attempting to fetch profile for user: ${userId}`);
 

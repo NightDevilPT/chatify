@@ -1,6 +1,7 @@
 import { Model, Types } from 'mongoose';
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
+import { ProfileResponseDto } from '../dto/profile-response.dto';
 import { Profile, ProfileDocument } from '../entities/profile.entity';
 import { BaseRepository } from 'src/common/base-repository/base-repository';
 
@@ -44,13 +45,40 @@ export class ProfileRepository extends BaseRepository<ProfileDocument> {
       .populate('userId', '-password');
   }
 
-  async findByUserIdWithUserDetails(userId: string): Promise<any | null> {
-    return await this.profileModel
+  async findByUserIdWithUserDetails(userId: string): Promise<ProfileResponseDto | null> {
+    const profile = await this.profileModel
       .findOne({ userId: new Types.ObjectId(userId) })
       .populate({
         path: 'userId',
         select: 'email username', // Only include needed fields
+        populate: {
+          path: 'settings',
+          select: 'theme language color soundEnabled font notifications',
+        },
       })
-      .lean({ virtuals: true });
+      .lean() as any;
+
+    if (!profile) return null;
+
+    // Generate fullName if firstName and lastName exist
+    const fullName = profile.firstName && profile.lastName 
+      ? `${profile.firstName} ${profile.lastName}` 
+      : undefined;
+
+    return {
+      id: profile._id.toString(),
+      user: profile.userId,
+      firstName: profile.firstName,
+      lastName: profile.lastName,
+      fullName,
+      contact: profile.contact,
+      avatar: profile.avatar,
+      bio: profile.bio,
+      gender: profile.gender,
+      dateOfBirth: profile.dateOfBirth,
+      location: profile.location,
+      createdAt: profile.createdAt,
+      updatedAt: profile.updatedAt,
+    };
   }
 }

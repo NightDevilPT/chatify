@@ -37,11 +37,9 @@ export function VerifyPage({
 	const { mutate: verifyEmail } = useVerifyEmail({
 		onSuccess: (response) => {
 			if (response.status === "success") {
-				console.log("Email verified successfully:", response);
 				setState(VerificationState.SUCCESS);
 				toast.success(t(`verifyUser.${response.message}`));
 			} else {
-				console.error("Verification failed:", response);
 				setState(VerificationState.FAILED);
 				toast.error(t(`verifyUser.${response.message}`));
 			}

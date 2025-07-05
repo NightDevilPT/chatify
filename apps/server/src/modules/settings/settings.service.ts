@@ -1,26 +1,32 @@
 import { Injectable } from '@nestjs/common';
+import { CommandBus, QueryBus } from '@nestjs/cqrs';
 import { CreateSettingDto } from './dto/create-setting.dto';
 import { UpdateSettingDto } from './dto/update-setting.dto';
+import { SettingsResponseDto } from './dto/setting-response.dto';
+import { GetSettingsQuery } from './queries/impl/get-settings.query';
+import { CreateSettingsCommand } from './commands/impl/create-settings.command';
+import { UpdateSettingsCommand } from './commands/impl/update-settings.command';
 
 @Injectable()
 export class SettingsService {
-  create(createSettingDto: CreateSettingDto) {
-    return 'This action adds a new setting';
+  constructor(
+    private readonly commandBus: CommandBus,
+    private readonly queryBus: QueryBus,
+  ) {}
+
+  async getSettingsByUserId(userId: string): Promise<SettingsResponseDto> {
+    return await this.queryBus.execute(new GetSettingsQuery(userId));
   }
 
-  findAll() {
-    return `This action returns all settings`;
+  async create(userId: string, createSettingsDto: CreateSettingDto) {
+    return this.commandBus.execute(
+      new CreateSettingsCommand(userId, createSettingsDto),
+    );
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} setting`;
-  }
-
-  update(id: number, updateSettingDto: UpdateSettingDto) {
-    return `This action updates a #${id} setting`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} setting`;
+  async update(userId: string, updateSettingsDto: UpdateSettingDto) {
+    return await this.commandBus.execute(
+      new UpdateSettingsCommand(userId, updateSettingsDto),
+    );
   }
 }
