@@ -1,0 +1,205 @@
+erDiagram
+    %% ================== CORE USER MODELS ==================
+    User {
+        string id PK "Primary key using cuid()"
+        string firstname "User's first name"
+        string lastname "User's last name" 
+        string username UK "Unique username for @mentions"
+        string email UK "Unique email for auth"
+        string password "Hashed password"
+        int otp "One-time password for verification"
+        int otpExpired "OTP expiration timestamp"
+        boolean isVerified "Email verification status"
+        datetime createdAt "Account creation date"
+        datetime updatedAt "Last profile update"
+    }
+    
+    UserSettings {
+        string id PK "Settings ID"
+        string userId FK "Links to User table"
+        enum theme "DARK or LIGHT theme preference"
+        enum language "User's preferred language"
+        enum primaryColor "Custom theme color"
+        boolean soundNotifications "Play sound on new messages"
+        boolean emailNotifications "Send email notifications"
+        boolean pushNotifications "Browser/mobile push notifications"
+        string timezone "User's timezone for scheduling"
+        datetime createdAt "Settings creation date"
+        datetime updatedAt "Last settings update"
+    }
+    
+    UserStatus {
+        string id PK "Status ID"
+        string userId FK "Links to User table"
+        enum status "ONLINE, AWAY, BUSY, OFFLINE"
+        string customMessage "Custom status message"
+        datetime lastSeenAt "Last activity timestamp"
+        datetime createdAt "Status creation date"
+        datetime updatedAt "Last status update"
+    }
+    
+    %% ================== WORKSPACE MODELS ==================
+    Workspace {
+        string id PK "Workspace unique identifier"
+        string name "Workspace display name"
+        string slug UK "URL-friendly workspace name"
+        string description "Workspace description"
+        string ownerId FK "Links to workspace owner User"
+        string imageUrl "Workspace logo/avatar URL"
+        boolean isPublic "Public workspace discovery"
+        datetime createdAt "Workspace creation date"
+        datetime updatedAt "Last workspace update"
+    }
+    
+    WorkspaceMember {
+        string id PK "Membership ID"
+        string workspaceId FK "Links to Workspace"
+        string userId FK "Links to User"
+        enum role "OWNER, ADMIN, MEMBER workspace role"
+        datetime joinedAt "When user joined workspace"
+        datetime createdAt "Membership record creation"
+        datetime updatedAt "Last membership update"
+    }
+    
+    %% ================== CHANNEL MODELS ==================
+    Channel {
+        string id PK "Channel unique identifier"
+        string workspaceId FK "Links to parent Workspace"
+        string name "Channel name without # symbol"
+        string description "Channel purpose description"
+        enum type "PUBLIC, PRIVATE, DIRECT channel type"
+        boolean isPrivate "Privacy flag for access control"
+        string createdById FK "Links to User who created channel"
+        datetime createdAt "Channel creation date"
+        datetime updatedAt "Last channel update"
+    }
+    
+    ChannelMember {
+        string id PK "Channel membership ID"
+        string channelId FK "Links to Channel"
+        string userId FK "Links to User"
+        enum role "ADMIN, MEMBER channel role"
+        datetime joinedAt "When user joined channel"
+        datetime lastReadAt "Last message read timestamp"
+        datetime createdAt "Membership creation date"
+        datetime updatedAt "Last membership update"
+    }
+    
+    %% ================== DIRECT MESSAGE MODELS ==================
+    DirectMessage {
+        string id PK "DM conversation ID"
+        string user1Id FK "First participant User ID"
+        string user2Id FK "Second participant User ID"
+        datetime createdAt "DM conversation start date"
+        datetime updatedAt "Last DM activity"
+    }
+    
+    %% ================== MESSAGE MODELS ==================
+    Message {
+        string id PK "Message unique identifier"
+        string content "Message text content"
+        string senderId FK "Links to User who sent message"
+        string channelId FK "Links to Channel (nullable)"
+        string directMessageId FK "Links to DirectMessage (nullable)"
+        string parentMessageId FK "Links to parent Message for threads"
+        enum messageType "TEXT, FILE, IMAGE, SYSTEM message types"
+        boolean isEdited "Message edit status"
+        boolean isPinned "Pinned message status"
+        datetime scheduledFor "Scheduled message delivery time"
+        datetime deletedAt "Soft delete timestamp"
+        datetime createdAt "Message creation date"
+        datetime updatedAt "Last message update"
+    }
+    
+    MessageReaction {
+        string id PK "Reaction ID"
+        string messageId FK "Links to Message"
+        string userId FK "Links to User who reacted"
+        string emoji "Emoji unicode or shortcode"
+        datetime createdAt "Reaction creation date"
+    }
+    
+    MessageAttachment {
+        string id PK "Attachment ID"
+        string messageId FK "Links to Message"
+        string fileName "Stored file name"
+        string originalName "Original uploaded file name"
+        string mimeType "File MIME type"
+        int fileSize "File size in bytes"
+        string url "File storage URL or path"
+        datetime createdAt "Attachment upload date"
+    }
+    
+    Thread {
+        string id PK "Thread ID"
+        string parentMessageId FK "Links to parent Message"
+        int messageCount "Number of replies in thread"
+        datetime lastReplyAt "Timestamp of latest reply"
+        datetime createdAt "Thread creation date"
+        datetime updatedAt "Last thread update"
+    }
+    
+    %% ================== SCHEDULED MESSAGE MODELS ==================
+    ScheduledMessage {
+        string id PK "Scheduled message ID"
+        string content "Message content to be sent"
+        string senderId FK "Links to User scheduling message"
+        string channelId FK "Target Channel (nullable)"
+        string directMessageId FK "Target DirectMessage (nullable)"
+        datetime scheduledFor "When to send the message"
+        enum status "PENDING, SENT, FAILED, CANCELLED"
+        int attemptCount "Delivery attempt counter"
+        string errorMessage "Error details if failed"
+        datetime createdAt "Schedule creation date"
+        datetime updatedAt "Last schedule update"
+    }
+    
+    %% ================== NOTIFICATION MODELS ==================
+    Notification {
+        string id PK "Notification ID"
+        string userId FK "Links to User receiving notification"
+        string title "Notification title"
+        string message "Notification content"
+        string actionUrl "URL for notification action"
+        enum type "MESSAGE, MENTION, REACTION, etc."
+        boolean isRead "Read status"
+        datetime createdAt "Notification creation date"
+    }
+    
+    %% ================== RELATIONSHIPS ==================
+    %% Core User Relations
+    User ||--|| UserSettings : "has personal settings"
+    User ||--|| UserStatus : "has current status"
+    
+    %% Workspace Relations  
+    User ||--o{ Workspace : "owns workspaces"
+    User ||--o{ WorkspaceMember : "belongs to workspaces"
+    Workspace ||--o{ WorkspaceMember : "has members"
+    Workspace ||--o{ Channel : "contains channels"
+    
+    %% Channel Relations
+    User ||--o{ Channel : "creates channels"
+    User ||--o{ ChannelMember : "joins channels"
+    Channel ||--o{ ChannelMember : "has members"
+    Channel ||--o{ Message : "contains messages"
+    
+    %% Direct Message Relations
+    User ||--o{ DirectMessage : "participates in DMs (user1)"
+    User ||--o{ DirectMessage : "participates in DMs (user2)"
+    DirectMessage ||--o{ Message : "contains DM messages"
+    
+    %% Message Relations
+    User ||--o{ Message : "sends messages"
+    User ||--o{ MessageReaction : "reacts to messages"
+    Message ||--o{ MessageReaction : "receives reactions"
+    Message ||--o{ MessageAttachment : "has attachments"
+    Message ||--o{ Message : "has reply threads"
+    Message ||--|| Thread : "starts thread"
+    
+    %% Scheduled Message Relations
+    User ||--o{ ScheduledMessage : "schedules messages"
+    Channel ||--o{ ScheduledMessage : "receives scheduled messages"
+    DirectMessage ||--o{ ScheduledMessage : "receives scheduled DMs"
+    
+    %% Notification Relations
+    User ||--o{ Notification : "receives notifications"

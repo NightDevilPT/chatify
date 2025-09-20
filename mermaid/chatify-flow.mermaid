@@ -1,0 +1,91 @@
+graph TD
+    %% USER ENTRY POINT
+    User[👤 User Signs Up]
+    
+    %% WORKSPACE LEVEL
+    User --> CreateWS[🏢 Create Workspace OR Join Existing Workspace]
+    CreateWS --> WSFeatures{Workspace Features}
+    
+    WSFeatures --> InviteMembers[👥 Invite Team Members]
+    
+    WSFeatures --> WSSettings[⚙️ Workspace Settings]
+    
+    WSFeatures --> CreateChannels[📁 Create Channels]
+    
+    %% CHANNEL CREATION FLOW
+    CreateChannels --> ChannelTypes{Channel Type?}
+    ChannelTypes --> PublicChannel[🌍 Public Channel]
+    ChannelTypes --> PrivateChannel[🔒 Private Channel]
+    
+    %% MESSAGING FLOWS
+    PublicChannel --> ChannelFeatures[📝 Channel Features]
+    PrivateChannel --> ChannelFeatures
+    
+    ChannelFeatures --> SendMessage[💬 Send Messages]
+    
+    SendMessage --> MessageFeatures{Message Features}
+    
+    MessageFeatures --> Reactions[😊 Reactions]
+    
+    MessageFeatures --> Threading[🧵 Threading]
+    
+    MessageFeatures --> Mentions[@Mentions]
+    
+    %% DIRECT MESSAGES
+    User --> StartDM[💭 Start Direct Message]
+    StartDM --> DMFeatures[🔒 DM Features]
+    DMFeatures --> MessageFeatures
+    
+    %% SCHEDULING
+    MessageFeatures --> ScheduleMsg[⏰ Schedule Messages]
+    
+    %% NOTIFICATIONS
+    Reactions --> Notifications[🔔 Notification System]
+    Threading --> Notifications
+    Mentions --> Notifications
+    DMFeatures --> Notifications
+    ScheduleMsg --> Notifications
+    
+    Notifications --> NotifTypes{Notification Types}
+    NotifTypes --> PushNotif[📱 Push Notifications]
+    NotifTypes --> InAppNotif[🔔 In-App Notifications]
+    
+    %% USER STATUS
+    User --> StatusMgmt[👤 Status Management]
+    
+    %% SEARCH & DISCOVERY
+    SendMessage --> SearchFeatures[🔍 Search & Discovery]
+    
+    %% CUSTOMIZATION
+    User --> Customization[🎨 Customization]
+    
+    %% ANALYTICS
+    SendMessage --> Analytics[📊 Analytics]
+    
+    %% INTEGRATIONS
+    WSSettings --> Integrations[🔗 Integrations]
+    
+    %% SECURITY & COMPLIANCE
+    WSFeatures --> Security[🔒 Security Features]
+    
+    %% MOBILE SUPPORT
+    Notifications --> MobileSync[📱 Mobile & Multi-Device]
+    
+    %% BUSINESS FEATURES
+    ChannelFeatures --> BusinessFeatures[🎯 Business Features]
+    
+    %% ADVANCED FEATURES
+    Analytics --> AdvancedFeatures[🚀 Advanced Features]
+    
+    %% STYLING
+    classDef userAction fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef workspaceFeature fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef messagingFeature fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef systemFeature fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef advancedFeature fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    
+    class User,StartDM,SendMessage userAction
+    class CreateWS,WSFeatures,InviteMembers,WSSettings,CreateChannels,PublicChannel,PrivateChannel workspaceFeature
+    class ChannelFeatures,MessageFeatures,Reactions,Threading,Mentions,DMFeatures messagingFeature
+    class Notifications,StatusMgmt,SearchFeatures,Customization,Security,MobileSync systemFeature
+    class Analytics,Integrations,BusinessFeatures,AdvancedFeatures advancedFeature
