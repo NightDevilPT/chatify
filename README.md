@@ -1,130 +1,212 @@
-# Warranty Management System - Admin Flow
-
-## Table of Contents
-1.  [Overview](#overview)
-2.  [Core Concepts: Roles vs. Permissions](#core-concepts-roles-vs-permissions)
-3.  [Key Features](#key-features)
-    *   [Dynamic Forms](#dynamic-forms)
-    *   [Dynamic Warranty Templates](#dynamic-warranty-templates)
-    *   [Dynamic Personas & Permissions](#dynamic-personas--permissions)
-    *   [Custom Email Templates](#custom-email-templates)
-4.  [System Admin Flow](#system-admin-flow)
-    *   [Company Onboarding Process](#company-onboarding-process)
-5.  [User & Partner Invitation Flow](#user--partner-invitation-flow)
-
----
+# Catify - Team Collaboration Platform
 
 ## Overview
 
-The Warranty Management System is a platform that enables companies to manage their warranty processes through a fully customizable portal. Companies can define their specific requirements for product registration, claims, user roles, and dynamic forms.
+Catify is a modern team collaboration platform that enables seamless communication through workspaces, channels, and direct messaging. Built with a robust architecture using NestJS, Prisma, and PostgreSQL, Catify provides real-time messaging, user status tracking, scheduled messages, and comprehensive notification systems.
 
-The onboarding process begins with our Admin team gathering the company's requirements. Using the admin portal, we then configure the company's organization, settings, and initial user accounts. Once setup is complete, the company's designated Super Admin gains full control to further customize and manage their portal, partners, and consumers.
+## Table of Contents
 
-## Core Concepts: Roles vs. Permissions
+1.  [Core Features](#core-features)
+2.  [User Management & Authentication](#user-management--authentication)
+3.  [Workspace System](#workspace-system)
+4.  [Channel Communication](#channel-communication)
+5.  [Direct Messaging](#direct-messaging)
+6.  [Advanced Features](#advanced-features)
+7.  [Real-time Capabilities](#real-time-capabilities)
+8.  [Architecture & Technical Stack](#architecture--technical-stack)
 
-*   **Roles** define a user's **type and position** within the organization. A role identifies **who the user is**.
-    *Example:*
-    ```typescript
-    enum ROLES {
-        ADMIN,
-        COMPANY_ADMIN,
-        COMPANY_PARTNER,
-        CONSUMER
-    }
-    ```
+---
 
-*   **Permissions** define the specific **actions a user can perform** within the system. Permissions control **what the user can do**.
-    *Example:*
-    ```json
-    {
-        "MANAGE": {
-            "CAN_ADD_PRODUCT": true,
-            "CAN_ADD_CATEGORY": true,
-            "CAN_ADD_CUSTOMER": true,
-            "CAN_ADD_PARTNER": false
-        },
-        "CAN_DO_REGISTRATION": false,
-        "CAN_INITIATE_CLAIMS": true
-    }
-    ```
+## Core Features
 
-## Key Features
+### 🚀 Real-time Team Collaboration
 
-### Dynamic Forms
-*   Generate custom forms tailored to a company's specific data collection needs.
-*   Supported form types include:
-    *   Product Form
-    *   Warranty Registration Form
-    *   Claim Form
-    *   Issues Form
-    *   Categories Form
-    *   Fault Form
-    *   Brand Form
-    *   ...and more as required.
+- **Workspace-based organization** - Create multiple teams with separate memberships
+- **Public and private channels** - Flexible communication spaces
+- **Direct messaging** - One-on-one private conversations
+- **Message reactions** - Express responses with emoji reactions
+- **File attachments** - Share documents and images seamlessly
 
-### Dynamic Warranty Templates
-*   Companies can define multiple warranty types, and the system dynamically generates the corresponding templates.
-*   When a company adds a product, the relevant warranty template becomes available for partners or admins to attach.
-*   During consumer registration, selecting a product automatically attaches its associated warranty.
-*   Templates support custom terms, conditions, and rules that are validated upon registration.
+### ⏰ Smart Messaging
 
-### Dynamic Personas & Permissions
-*   Companies can create **custom personas** (e.g., Dealer, Installer, Retailer, Repairer) to represent different partner types.
-*   Company admins can assign granular permissions (e.g., `CAN_DO_REGISTRATION`, `CAN_DO_CLAIMS`, `CAN_INVITE_PARTNER`) to these personas.
-*   Only the Company Super Admin has full CRUD rights for managing personas and permissions.
-*   When inviting a new partner, the admin selects a persona to assign, which automatically grants the associated permissions upon signup.
+- **Scheduled messages** - Plan messages for future delivery
+- **Message threading** - Organized conversations with reply threads
+- **Message editing & deletion** - Full control over your content
+- **Pinned messages** - Highlight important announcements
 
-### Custom Email Templates
-*   Company Super Admins can create and customize email templates for system events.
-*   Supported events include: `REGISTRATION_CREATED`, `CLAIM_CREATED`, `CLAIM_UPDATED`, `REGISTRATION_UPDATED`, etc.
-*   Each template supports dynamic variables for the subject, HTML content, and body.
+### 👥 User Management
 
-## System Admin Flow
+- **Flexible invitation system** - Invite users via email with customizable roles
+- **Granular permissions** - Control access at workspace and channel levels
+- **User status tracking** - See who's online, away, or busy
+- **Custom status messages** - Set personalized availability status
 
-The platform has a single, overarching **System Admin** role with full control over the entire application. This account can be managed or terminated even while the server is running.
+### 🎨 Personalized Experience
 
-The System Admin is responsible for onboarding new companies based on their gathered requirements.
+- **Theme customization** - Light and dark mode support
+- **Multi-language interface** - Support for English, Spanish, French, and German
+- **Notification preferences** - Control how and when you receive alerts
+- **Custom color schemes** - Personalize your interface
 
-### Company Onboarding Process
+## User Management & Authentication
 
-1.  **Organization Creation**
-    The Admin creates the company's organization, providing details such as:
-    `[firstname, lastname, username, orgName, phone, address, email, info: {logo, currency, etc}]`
+### Registration Flow
 
-2.  **Schema Setup**
-    The Admin creates the initial set of dynamic form schemas required by the company, such as:
-    *   Claim
-    *   Category
-    *   Brand
-    *   Product
-    *   Registration
-    *   Customer
+1. **User Signup** - Create account with email verification
+2. **Email Confirmation** - Secure account activation process
+3. **Profile Completion** - Set up personal information and preferences
 
-3.  **Warranty Template Setup**
-    The Admin defines the company's warranty templates, configuring:
-    *   `warrantyType`
-    *   Validation `rules`
-    *   `info` (e.g., label, description)
-    *   `terms` (e.g., label, description)
+### Authentication Features
 
-4.  **Super Admin Invitation**
-    The System Admin assigns a user as the **Company Super Admin**. The system automatically sends this user an email invitation to sign up, set their password, and verify their account.
+- Secure password storage with hashing
+- OTP (One-Time Password) support for additional security
+- Session management with last seen tracking
+- Account verification system
 
-5.  **Super Admin Handover**
-    Once the Company Super Admin completes signup, they gain full administrative control over their company's portal, including the ability to manage products, partners, and further customize all settings.
+### User Status System
 
-## User & Partner Invitation Flow
+- **Online** - Actively using the application
+- **Away** - Inactive for a period of time
+- **Busy** - Do not disturb mode
+- **Offline** - Not connected to the platform
+- **Pending** - Registered but not yet verified
 
-The process for adding new users (both Super Admins and Partners) is streamlined:
+## Workspace System
 
-1.  **Invitation:** An Admin or Super Admin adds a user with details (name, email, organization).
-2.  **Email Trigger:**
-    *   A **Company Super Admin** receives an onboarding email to sign up and verify their account.
-    *   A **Company Partner** receives an invitation email to join the organization.
-3.  **Account & Org Setup:** During signup, the system:
-    *   Creates the user's account.
-    *   For partners, it creates a new child organization with default settings.
-    *   Links the new organization to the parent company by setting its `rootOrgId`.
-4.  **Permission Granting:** The user is automatically assigned the permissions associated with the role and persona they were invited under.
+### Workspace Structure
 
-**NOTE:** When we add a user, we create one organization for this user and connect the two to each other. The same user can have multiple organizations, allowing the user to maintain relationships with multiple organizations. For example: `user -> {rootOrgId, orgId, role: ROLE[]}[]`
+- **Workspace Owners** - Full administrative control
+- **Workspace Admins** - Management capabilities without ownership transfer
+- **Workspace Members** - Standard participation rights
+
+### Invitation Management
+
+- **Email-based invitations** - Send invites to new or existing users
+- **Invitation status tracking** - Pending, accepted, declined, expired, or cancelled
+- **Custom invitation messages** - Personalize invites with welcome messages
+- **Role-based invitations** - Assign specific roles during invitation
+
+### Workspace Features
+
+- **Public/private workspaces** - Control visibility and access
+- **Custom branding** - Upload workspace images and set descriptions
+- **URL-friendly slugs** - Easy sharing and access
+- **Member management** - Add, remove, and manage members efficiently
+
+## Channel Communication
+
+### Channel Types
+
+- **Public Channels** - Visible and joinable by all workspace members
+- **Private Channels** - Invitation-only access for sensitive discussions
+- **Direct Message Channels** - Automated one-on-one conversations
+
+### Channel Management
+
+- **Channel-specific roles** - Admin and member permissions
+- **Read receipt tracking** - See when messages are read
+- **Message history** - Complete conversation archives
+- **Channel organization** - Structured by topics and teams
+
+### Message System
+
+- **Multiple message types** - Text, file attachments, images, and system messages
+- **Message threading** - Organized replies and conversations
+- **Reaction system** - Emoji responses to messages
+- **Pinned messages** - Important messages highlighted at the top
+
+## Direct Messaging
+
+### Private Conversations
+
+- **One-on-one messaging** - Secure private conversations
+- **Conversation history** - Complete message archives
+- **File sharing** - Exchange documents in private
+- **Status indicators** - See when recipients are typing or online
+
+### DM Management
+
+- **Conversation list** - Easy access to all direct messages
+- **Search functionality** - Find specific conversations quickly
+- **Notification controls** - Manage alerts for individual conversations
+
+## Advanced Features
+
+### Scheduled Messages
+
+- **Future message delivery** - Plan messages for optimal timing
+- **Time zone support** - Automatic time zone conversion
+- **Delivery status tracking** - Monitor sent, pending, and failed messages
+- **Retry mechanism** - Automatic retries for failed deliveries
+
+### Notification System
+
+- **Multiple notification types**:
+    - New messages
+    - Mentions (@username)
+    - Message reactions
+    - Channel invitations
+    - Workspace invitations
+    - System announcements
+
+- **Customizable delivery**:
+    - In-app notifications
+    - Email alerts
+    - Push notifications (mobile)
+    - Sound alerts
+
+### File Management
+
+- **Multiple attachment support** - Attach multiple files to messages
+- **File type detection** - Automatic handling of different file types
+- **Size management** - Controlled file upload sizes
+- **Storage optimization** - Efficient file storage and retrieval
+
+## Real-time Capabilities
+
+### Live Updates
+
+- **Real-time messaging** - Instant message delivery
+- **Typing indicators** - See when others are typing
+- **Online status** - Real-time user presence updates
+- **Read receipts** - Know when messages are seen
+
+### WebSocket Integration
+
+- **Bi-directional communication** - Instant updates between clients and server
+- **Connection management** - Efficient handling of multiple connections
+- **Room-based messaging** - Organized communication channels
+- **Event-based system** - Structured real-time events
+
+## Architecture & Technical Stack
+
+### Backend Architecture
+
+- **NestJS Framework** - Progressive Node.js framework
+- **Prisma ORM** - Next-generation database toolkit
+- **PostgreSQL** - Powerful open-source database
+- **CQRS Pattern** - Command Query Responsibility Segregation
+- **Repository Pattern** - Clean data access abstraction
+
+### Database Design
+
+- **Relational structure** - Well-defined relationships between entities
+- **Enum-based types** - Consistent data validation
+- **Soft delete support** - Data preservation with deletion tracking
+- **Index optimization** - Performance-optimized querying
+
+### Modular Structure
+
+- **User Module** - Authentication and user management
+- **Workspace Module** - Team organization and management
+- **Channel Module** - Communication space management
+- **Message Module** - Message handling and delivery
+- **Notification Module** - Alert and notification system
+
+### Security Features
+
+- **Data validation** - Comprehensive input validation
+- **Role-based access control** - Granular permission system
+- **Secure authentication** - Protected user access
+- **Data encryption** - Secure data storage and transmission
+
